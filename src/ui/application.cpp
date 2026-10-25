@@ -1,8 +1,3 @@
-namespace i18n = Lingmo::I18n;
-
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
-
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -28,8 +23,11 @@ namespace base = Lingmo::Base;
 #include "ui/window.h"
 #include "wayland/connection.h"
 
-namespace Lingmo::UI {
+namespace base = Lingmo::Base;
 namespace dbus = Lingmo::Base::DBus;
+namespace i18n = Lingmo::I18n;
+
+namespace Lingmo::UI {
 
 static Application* s_instance = nullptr;
 

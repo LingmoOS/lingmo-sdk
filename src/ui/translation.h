@@ -4,12 +4,12 @@
 
 #pragma once
 
-namespace i18n = Lingmo::I18n;
-
 #include <cstdint>
 #include <string>
 
 #include "base/i18n.h"
+
+namespace i18n = Lingmo::I18n;
 
 // The toolkit's own text, in its own catalog whatever the program's domain.
 namespace Lingmo::UI {

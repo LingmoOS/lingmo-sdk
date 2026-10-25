@@ -1,5 +1,3 @@
-namespace ui = Lingmo::UI;
-
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -34,6 +32,8 @@ namespace ui = Lingmo::UI;
 #include "ui/application.h"
 #include "ui/line_breaks.h"
 #include "ui/text_context.h"
+namespace base = Lingmo::Base;
+namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
 
