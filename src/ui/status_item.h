@@ -4,8 +4,6 @@
 
 #pragma once
 
-namespace ui = Lingmo::UI;
-
 #include <functional>
 #include <memory>
 #include <string>
