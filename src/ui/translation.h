@@ -4,6 +4,8 @@
 
 #pragma once
 
+namespace i18n = Lingmo::I18n;
+
 #include <cstdint>
 #include <string>
 

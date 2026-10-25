@@ -1,3 +1,5 @@
+namespace i18n = Lingmo::I18n;
+
 namespace Lingmo::Base { class EventLoop; }
 namespace base = Lingmo::Base;
 

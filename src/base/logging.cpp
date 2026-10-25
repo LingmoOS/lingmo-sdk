@@ -18,6 +18,7 @@
 #include "base/strings.h"
 
 namespace Lingmo::Base {
+namespace strings = Lingmo::Base::strings;
 
 static constexpr unsigned kFatalBit = 1u << unsigned(LogLevel::Fatal);
 

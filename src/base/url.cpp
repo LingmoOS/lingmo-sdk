@@ -7,6 +7,7 @@
 #include "base/strings.h"
 
 namespace Lingmo::Base::url {
+namespace strings = Lingmo::Base::strings;
 
 static int hexValue(char c)
 {

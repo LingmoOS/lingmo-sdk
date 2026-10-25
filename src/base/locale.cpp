@@ -38,6 +38,7 @@ U_CAPI UResourceBundle* U_EXPORT2 ures_getByKeyWithFallback(const UResourceBundl
                                                             UResourceBundle* fillIn, UErrorCode* status);
 
 namespace Lingmo::Base {
+namespace strings = Lingmo::Base::strings;
 
 struct Locale::Data
 {
