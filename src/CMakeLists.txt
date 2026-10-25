@@ -1,10 +1,10 @@
 # Generated protocol marshalling; the sources live in the build tree.
-set(CUTEFISH_PROTOCOL_DIR ${CMAKE_CURRENT_BINARY_DIR}/wayland-protocols)
-file(MAKE_DIRECTORY ${CUTEFISH_PROTOCOL_DIR})
+set(LINGMO_PROTOCOL_DIR ${CMAKE_CURRENT_BINARY_DIR}/wayland-protocols)
+file(MAKE_DIRECTORY ${LINGMO_PROTOCOL_DIR})
 
 function(lingmo_wayland_protocol name xml)
-    set(code ${CUTEFISH_PROTOCOL_DIR}/${name}-protocol.c)
-    set(client ${CUTEFISH_PROTOCOL_DIR}/${name}-client-protocol.h)
+    set(code ${LINGMO_PROTOCOL_DIR}/${name}-protocol.c)
+    set(client ${LINGMO_PROTOCOL_DIR}/${name}-client-protocol.h)
     add_custom_command(OUTPUT ${code}
         COMMAND ${WAYLAND_SCANNER} private-code ${xml} ${code}
         DEPENDS ${xml} VERBATIM)
@@ -57,7 +57,7 @@ lingmo_wayland_protocol(lingmo-window-placement-v1
 
 add_subdirectory(base)
 
-set(CUTEFISH_TOOLKIT_PUBLIC_HEADERS
+set(LINGMO_TOOLKIT_PUBLIC_HEADERS
     ui/about_dialog.h
     ui/animated_image.h
     ui/animation.h
@@ -247,16 +247,16 @@ add_library(lingmo-sdk SHARED
 )
 
 # The glyph icons, built in so they need no install location.
-file(GLOB CUTEFISH_TOOLKIT_ICONS CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/data/icons/*.svg)
-set(CUTEFISH_TOOLKIT_EMBEDDED ${CMAKE_CURRENT_BINARY_DIR}/embedded_files.cpp)
+file(GLOB LINGMO_TOOLKIT_ICONS CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/data/icons/*.svg)
+set(LINGMO_TOOLKIT_EMBEDDED ${CMAKE_CURRENT_BINARY_DIR}/embedded_files.cpp)
 # A list would be split into separate arguments on the way to the script.
-string(REPLACE ";" "|" CUTEFISH_TOOLKIT_ICON_LIST "${CUTEFISH_TOOLKIT_ICONS}")
-add_custom_command(OUTPUT ${CUTEFISH_TOOLKIT_EMBEDDED}
-    COMMAND ${CMAKE_COMMAND} -DOUTPUT=${CUTEFISH_TOOLKIT_EMBEDDED}
-            -DFILES=${CUTEFISH_TOOLKIT_ICON_LIST} -P ${PROJECT_SOURCE_DIR}/cmake/EmbedFiles.cmake
-    DEPENDS ${CUTEFISH_TOOLKIT_ICONS} ${PROJECT_SOURCE_DIR}/cmake/EmbedFiles.cmake
+string(REPLACE ";" "|" LINGMO_TOOLKIT_ICON_LIST "${LINGMO_TOOLKIT_ICONS}")
+add_custom_command(OUTPUT ${LINGMO_TOOLKIT_EMBEDDED}
+    COMMAND ${CMAKE_COMMAND} -DOUTPUT=${LINGMO_TOOLKIT_EMBEDDED}
+            -DFILES=${LINGMO_TOOLKIT_ICON_LIST} -P ${PROJECT_SOURCE_DIR}/cmake/EmbedFiles.cmake
+    DEPENDS ${LINGMO_TOOLKIT_ICONS} ${PROJECT_SOURCE_DIR}/cmake/EmbedFiles.cmake
     VERBATIM)
-target_sources(lingmo-sdk PRIVATE ${CUTEFISH_TOOLKIT_EMBEDDED})
+target_sources(lingmo-sdk PRIVATE ${LINGMO_TOOLKIT_EMBEDDED})
 
 add_library(Lingmo::SDK ALIAS lingmo-sdk)
 
@@ -278,7 +278,7 @@ target_include_directories(lingmo-sdk
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk>
-    PRIVATE ${CUTEFISH_PROTOCOL_DIR}
+    PRIVATE ${LINGMO_PROTOCOL_DIR}
 )
 
 target_link_libraries(lingmo-sdk
@@ -298,15 +298,15 @@ target_link_libraries(lingmo-sdk
 )
 target_include_directories(lingmo-sdk PRIVATE ${Jxl_INCLUDE_DIRS})
 target_compile_definitions(lingmo-sdk PRIVATE
-    CUTEFISH_JXL_LIBRARY="${CUTEFISH_jxl_SONAME}"
-    CUTEFISH_JXL_THREADS_LIBRARY="${CUTEFISH_jxl_threads_SONAME}"
+    LINGMO_JXL_LIBRARY="${LINGMO_jxl_SONAME}"
+    LINGMO_JXL_THREADS_LIBRARY="${LINGMO_jxl_threads_SONAME}"
 )
 
 install(TARGETS lingmo-sdk EXPORT LingmoSDKTargets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
-foreach(header ${CUTEFISH_TOOLKIT_PUBLIC_HEADERS})
+foreach(header ${LINGMO_TOOLKIT_PUBLIC_HEADERS})
     get_filename_component(directory ${header} DIRECTORY)
     install(FILES ${header} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk/${directory})
 endforeach()

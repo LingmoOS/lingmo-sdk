@@ -81,8 +81,8 @@ add_executable(lingmo-sdk-tests
 pkg_check_modules(ImageTestEncoders REQUIRED IMPORTED_TARGET libjpeg libpng libwebp libtiff-4 libjxl libheif)
 target_link_libraries(lingmo-sdk-tests PRIVATE lingmo-sdk GTest::gtest PkgConfig::ImageTestEncoders)
 target_compile_definitions(lingmo-sdk-tests
-    PRIVATE CUTEFISH_TOOLKIT_PROTOCOL_DIR="${PROJECT_SOURCE_DIR}/protocols"
-    CUTEFISH_TOOLKIT_TEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
+    PRIVATE LINGMO_TOOLKIT_PROTOCOL_DIR="${PROJECT_SOURCE_DIR}/protocols"
+    LINGMO_TOOLKIT_TEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 
 gtest_discover_tests(lingmo-sdk-tests)
 # Read after the discovered tests, which it needs to exist.

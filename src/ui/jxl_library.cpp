@@ -18,13 +18,13 @@ static void* openLibrary(const char* name)
 
 static void* decoderLibrary()
 {
-    static void* const handle = openLibrary(CUTEFISH_JXL_LIBRARY);
+    static void* const handle = openLibrary(LINGMO_JXL_LIBRARY);
     return handle;
 }
 
 static void* threadsLibrary()
 {
-    static void* const handle = openLibrary(CUTEFISH_JXL_THREADS_LIBRARY);
+    static void* const handle = openLibrary(LINGMO_JXL_THREADS_LIBRARY);
     return handle;
 }
 

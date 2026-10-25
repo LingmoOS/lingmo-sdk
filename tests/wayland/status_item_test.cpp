@@ -267,7 +267,7 @@ TEST(StatusItemProtocolTest, AnItemHearsTheBarAndAcknowledgesItsConfigure)
     settle(compositor, connection->display());
 
     compositor.post([&compositor] {
-        lingmo_status_item_v1_send_appearance(compositor.item(), CUTEFISH_STATUS_ITEM_V1_APPEARANCE_DARK, 0xffffffff);
+        lingmo_status_item_v1_send_appearance(compositor.item(), LINGMO_STATUS_ITEM_V1_APPEARANCE_DARK, 0xffffffff);
         lingmo_status_item_v1_send_highlight(compositor.item(), 1);
         lingmo_status_item_v1_send_placed(compositor.item(), 700, 0, 40, 32);
         lingmo_status_item_v1_send_configure(compositor.item(), 7, 32, 300);

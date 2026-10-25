@@ -20,7 +20,7 @@ using namespace Lingmo::UI;
 // kept as the result's alpha (the source is black, so that is all of it).
 static std::string dataPath(const std::string& name)
 {
-    return std::string(CUTEFISH_TOOLKIT_TEST_DATA_DIR) + "/fast_blur/" + name;
+    return std::string(LINGMO_TOOLKIT_TEST_DATA_DIR) + "/fast_blur/" + name;
 }
 
 static std::string scaleName(double scale)

@@ -11,6 +11,8 @@
 
 namespace Lingmo::I18n {
 
+namespace base = Lingmo::Base;
+
 void setDomain(const char* domain)
 {
     bindDomain(domain);
@@ -19,7 +21,7 @@ void setDomain(const char* domain)
 
 void bindDomain(const char* domain)
 {
-    bindtextdomain(domain, CUTEFISH_LOCALE_DIR);
+    bindtextdomain(domain, LINGMO_LOCALE_DIR);
     bind_textdomain_codeset(domain, "UTF-8");
 }
 

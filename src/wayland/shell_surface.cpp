@@ -165,7 +165,7 @@ struct ShellSurfaceListeners
     static void statusItemAppearance(void* data, lingmo_status_item_v1*, uint32_t appearance, uint32_t foreground)
     {
         static_cast<ShellSurface*>(data)->m_delegate->statusItemAppearance(
-                appearance == CUTEFISH_STATUS_ITEM_V1_APPEARANCE_DARK, foreground);
+                appearance == LINGMO_STATUS_ITEM_V1_APPEARANCE_DARK, foreground);
     }
 
     static void statusItemHighlight(void* data, lingmo_status_item_v1*, uint32_t highlighted)
@@ -217,13 +217,13 @@ static std::vector<int32_t> pathValues(const Path& path)
     for (const Path::Element& element : path.elements()) {
         switch (element.type) {
         case Path::Element::Type::MoveTo:
-            values.push_back(CUTEFISH_SURFACE_BLUR_V1_PATH_COMMAND_MOVE_TO);
+            values.push_back(LINGMO_SURFACE_BLUR_V1_PATH_COMMAND_MOVE_TO);
             break;
         case Path::Element::Type::LineTo:
-            values.push_back(CUTEFISH_SURFACE_BLUR_V1_PATH_COMMAND_LINE_TO);
+            values.push_back(LINGMO_SURFACE_BLUR_V1_PATH_COMMAND_LINE_TO);
             break;
         case Path::Element::Type::CurveTo:
-            values.push_back(CUTEFISH_SURFACE_BLUR_V1_PATH_COMMAND_CUBIC_TO);
+            values.push_back(LINGMO_SURFACE_BLUR_V1_PATH_COMMAND_CUBIC_TO);
             break;
         case Path::Element::Type::CurveToData:
             break;
@@ -471,8 +471,8 @@ bool ShellSurface::setDesktop(const std::string& outputName)
         m_shellSurface = lingmo_shell_v1_get_shell_surface(m_connection.shell(), m_surface);
         lingmo_shell_surface_v1_add_listener(m_shellSurface, &ShellSurfaceListeners::shellSurface, this);
     }
-    lingmo_shell_surface_v1_set_role(m_shellSurface, CUTEFISH_SHELL_SURFACE_V1_ROLE_DESKTOP);
-    lingmo_shell_surface_v1_set_focus_policy(m_shellSurface, CUTEFISH_SHELL_SURFACE_V1_FOCUS_POLICY_NORMAL);
+    lingmo_shell_surface_v1_set_role(m_shellSurface, LINGMO_SHELL_SURFACE_V1_ROLE_DESKTOP);
+    lingmo_shell_surface_v1_set_focus_policy(m_shellSurface, LINGMO_SHELL_SURFACE_V1_FOCUS_POLICY_NORMAL);
     if (!outputName.empty())
         lingmo_shell_surface_v1_set_output(m_shellSurface, outputName.c_str());
     // The desktop draws no frame, so the compositor owns no resize edges.
@@ -625,8 +625,8 @@ void ShellSurface::setResizeAroundCenter(bool aroundCenter)
 {
     if (m_xdgToplevel && m_connection.windowHints())
         lingmo_window_hints_v1_set_resize_anchor(m_connection.windowHints(), m_surface,
-                                                   aroundCenter ? CUTEFISH_WINDOW_HINTS_V1_RESIZE_ANCHOR_CENTER
-                                                                : CUTEFISH_WINDOW_HINTS_V1_RESIZE_ANCHOR_TOP_LEFT);
+                                                   aroundCenter ? LINGMO_WINDOW_HINTS_V1_RESIZE_ANCHOR_CENTER
+                                                                : LINGMO_WINDOW_HINTS_V1_RESIZE_ANCHOR_TOP_LEFT);
 }
 
 void ShellSurface::setSkipTaskbar(bool skip)

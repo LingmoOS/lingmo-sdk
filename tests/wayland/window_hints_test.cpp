@@ -261,11 +261,11 @@ TEST(WindowHintsProtocolTest, PlacementAnchorIsSentAndUnset)
     });
     ASSERT_EQ(hints.size(), 3u);
     EXPECT_EQ(hints[0].name, "set_placement_anchor");
-    EXPECT_EQ(hints[0].arguments, (std::vector<int64_t>{700, 13, 0, 0, CUTEFISH_WINDOW_HINTS_V1_PLACEMENT_EDGE_BOTTOM,
-                                                        CUTEFISH_WINDOW_HINTS_V1_PLACEMENT_EDGE_BOTTOM}));
+    EXPECT_EQ(hints[0].arguments, (std::vector<int64_t>{700, 13, 0, 0, LINGMO_WINDOW_HINTS_V1_PLACEMENT_EDGE_BOTTOM,
+                                                        LINGMO_WINDOW_HINTS_V1_PLACEMENT_EDGE_BOTTOM}));
     EXPECT_EQ(hints[1].arguments,
-              (std::vector<int64_t>{11, 20, 30, 41, CUTEFISH_WINDOW_HINTS_V1_PLACEMENT_EDGE_TOP_LEFT,
-                                    CUTEFISH_WINDOW_HINTS_V1_PLACEMENT_EDGE_BOTTOM_RIGHT}));
+              (std::vector<int64_t>{11, 20, 30, 41, LINGMO_WINDOW_HINTS_V1_PLACEMENT_EDGE_TOP_LEFT,
+                                    LINGMO_WINDOW_HINTS_V1_PLACEMENT_EDGE_BOTTOM_RIGHT}));
     EXPECT_EQ(hints[2].name, "unset_placement_anchor");
 }
 

@@ -35,12 +35,12 @@ pkg_check_modules(ImageCodecs REQUIRED IMPORTED_TARGET
 # libraries give themselves.
 pkg_check_modules(Jxl REQUIRED libjxl libjxl_threads)
 foreach(library jxl jxl_threads)
-    find_library(CUTEFISH_${library}_PATH NAMES ${library} HINTS ${Jxl_LIBRARY_DIRS} REQUIRED)
-    execute_process(COMMAND ${CMAKE_OBJDUMP} -p ${CUTEFISH_${library}_PATH} OUTPUT_VARIABLE dynamic)
+    find_library(LINGMO_${library}_PATH NAMES ${library} HINTS ${Jxl_LIBRARY_DIRS} REQUIRED)
+    execute_process(COMMAND ${CMAKE_OBJDUMP} -p ${LINGMO_${library}_PATH} OUTPUT_VARIABLE dynamic)
     if(NOT dynamic MATCHES "SONAME +([^\n]+)")
-        message(FATAL_ERROR "No SONAME in ${CUTEFISH_${library}_PATH}")
+        message(FATAL_ERROR "No SONAME in ${LINGMO_${library}_PATH}")
     endif()
-    set(CUTEFISH_${library}_SONAME ${CMAKE_MATCH_1})
+    set(LINGMO_${library}_SONAME ${CMAKE_MATCH_1})
 endforeach()
 pkg_check_modules(SkiaDependencies REQUIRED IMPORTED_TARGET
     freetype2 harfbuzz icu-uc libpng libjpeg zlib expat)

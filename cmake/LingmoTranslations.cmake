@@ -17,23 +17,23 @@ function(lingmo_add_translations domain)
     set(po_directory ${CMAKE_CURRENT_SOURCE_DIR}/po)
     file(GLOB po_files CONFIGURE_DEPENDS ${po_directory}/*.po)
     list(SORT po_files)
-    find_program(CUTEFISH_MSGFMT msgfmt)
-    find_program(CUTEFISH_XGETTEXT xgettext)
-    find_program(CUTEFISH_MSGMERGE msgmerge)
+    find_program(LINGMO_MSGFMT msgfmt)
+    find_program(LINGMO_XGETTEXT xgettext)
+    find_program(LINGMO_MSGMERGE msgmerge)
 
-    if(CUTEFISH_XGETTEXT AND CUTEFISH_MSGMERGE)
+    if(LINGMO_XGETTEXT AND LINGMO_MSGMERGE)
         # A list would be split into separate arguments on the way to the script.
         string(REPLACE ";" "|" sources "${arg_SOURCES}")
         string(REPLACE ";" "|" desktop_files "${arg_DESKTOP_FILES}")
         add_custom_target(update-translations
             COMMAND ${CMAKE_COMMAND} -DDOMAIN=${domain} -DSOURCE_DIRECTORY=${CMAKE_CURRENT_SOURCE_DIR}
                     -DSOURCES=${sources} -DDESKTOP_FILES=${desktop_files}
-                    -DXGETTEXT=${CUTEFISH_XGETTEXT} -DMSGMERGE=${CUTEFISH_MSGMERGE}
+                    -DXGETTEXT=${LINGMO_XGETTEXT} -DMSGMERGE=${LINGMO_MSGMERGE}
                     -P ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/LingmoTranslationsUpdate.cmake
             VERBATIM)
     endif()
 
-    if(NOT CUTEFISH_MSGFMT)
+    if(NOT LINGMO_MSGFMT)
         message(STATUS "msgfmt not found: ${domain} is built without translations")
         foreach(desktop_file ${arg_DESKTOP_FILES})
             get_filename_component(name ${desktop_file} NAME)
@@ -50,7 +50,7 @@ function(lingmo_add_translations domain)
         set(catalog ${CMAKE_CURRENT_BINARY_DIR}/locale/${language}/${domain}.mo)
         add_custom_command(OUTPUT ${catalog}
             COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/locale/${language}
-            COMMAND ${CUTEFISH_MSGFMT} -o ${catalog} ${po_file}
+            COMMAND ${LINGMO_MSGFMT} -o ${catalog} ${po_file}
             DEPENDS ${po_file}
             VERBATIM)
         list(APPEND catalogs ${catalog})
@@ -73,7 +73,7 @@ function(lingmo_add_translations domain)
         endforeach()
         add_custom_command(OUTPUT ${output}
             ${copies}
-            COMMAND ${CUTEFISH_MSGFMT} --desktop --template=${template} -d ${desktop_po_directory} -o ${output}
+            COMMAND ${LINGMO_MSGFMT} --desktop --template=${template} -d ${desktop_po_directory} -o ${output}
             DEPENDS ${template} ${po_files}
             VERBATIM)
         list(APPEND desktop_outputs ${output})
@@ -83,12 +83,12 @@ function(lingmo_add_translations domain)
 
     string(REPLACE ";" "|" po_list "${po_files}")
     add_custom_target(check-translations
-        COMMAND ${CMAKE_COMMAND} -DPO_FILES=${po_list} -DMSGFMT=${CUTEFISH_MSGFMT}
+        COMMAND ${CMAKE_COMMAND} -DPO_FILES=${po_list} -DMSGFMT=${LINGMO_MSGFMT}
                 -P ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/LingmoTranslationsCheck.cmake
         VERBATIM)
     if(BUILD_TESTING AND po_files)
         add_test(NAME translations
-            COMMAND ${CMAKE_COMMAND} -DPO_FILES=${po_list} -DMSGFMT=${CUTEFISH_MSGFMT}
+            COMMAND ${CMAKE_COMMAND} -DPO_FILES=${po_list} -DMSGFMT=${LINGMO_MSGFMT}
                     -P ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/LingmoTranslationsCheck.cmake)
     endif()
 endfunction()

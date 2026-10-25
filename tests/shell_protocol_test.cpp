@@ -31,7 +31,7 @@ static std::vector<std::string> messages(const std::string& xml, const std::stri
 // keep these opcodes.
 TEST(ShellProtocolTest, DesktopInterfaceIsTheTrimmedOne)
 {
-    std::ifstream file(CUTEFISH_TOOLKIT_PROTOCOL_DIR "/lingmo-shell-v1.xml");
+    std::ifstream file(LINGMO_TOOLKIT_PROTOCOL_DIR "/lingmo-shell-v1.xml");
     ASSERT_TRUE(file.good());
     std::stringstream stream;
     stream << file.rdbuf();

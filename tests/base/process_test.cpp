@@ -111,8 +111,8 @@ TEST(ProcessTest, UsesTheGivenEnvironment)
 {
     EventLoop loop;
     Process process(&loop);
-    process.setEnvironment({"CUTEFISH_TEST_VALUE=given", "PATH=/usr/bin:/bin"});
-    ASSERT_TRUE(process.start("sh", {"-c", "printf '%s' \"$CUTEFISH_TEST_VALUE\"; printf '%s' \"${HOME:-none}\""}));
+    process.setEnvironment({"LINGMO_TEST_VALUE=given", "PATH=/usr/bin:/bin"});
+    ASSERT_TRUE(process.start("sh", {"-c", "printf '%s' \"$LINGMO_TEST_VALUE\"; printf '%s' \"${HOME:-none}\""}));
     ASSERT_TRUE(runUntilFinished(loop, process));
     EXPECT_EQ(process.standardOutput(), "givennone");
 }
@@ -343,9 +343,9 @@ TEST(ProcessTest, DetachedProgramsGetTheGivenEnvironment)
     file::TemporaryDirectory directory(std::filesystem::temp_directory_path().string());
     const std::string written = directory.path() + "/environment";
     ASSERT_GT(Process::startDetached("sh",
-                                     {"-c", "printf '%s %s %s' \"$CUTEFISH_GIVEN\" \"$HOME\" \"${PATH:+path}\" > "
+                                     {"-c", "printf '%s %s %s' \"$LINGMO_GIVEN\" \"$HOME\" \"${PATH:+path}\" > "
                                                     + written + ".part; mv " + written + ".part " + written},
-                                     {}, {"CUTEFISH_GIVEN=token", "HOME=/given"}),
+                                     {}, {"LINGMO_GIVEN=token", "HOME=/given"}),
               0);
     Timer poll(&loop);
     poll.onTimeout = [&] {
