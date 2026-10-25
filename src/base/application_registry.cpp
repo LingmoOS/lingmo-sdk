@@ -15,6 +15,7 @@
 #include "base/paths.h"
 
 namespace Lingmo::Base {
+namespace dbus = Lingmo::Base::DBus;
 
 namespace fs = std::filesystem;
 

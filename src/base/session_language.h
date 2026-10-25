@@ -11,9 +11,12 @@
 
 namespace Lingmo::Base {
 
-namespace dbus {
+namespace DBus {
 class Connection;
 }
+
+// Shorthand for the D-Bus namespace.
+namespace dbus = Lingmo::Base::DBus;
 
 // Follows the session language that lingmo-services keeps: when it
 // changes, the process's language variables and locale are set again and

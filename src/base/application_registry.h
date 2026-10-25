@@ -18,6 +18,8 @@
 
 namespace Lingmo::Base {
 
+namespace dbus = Lingmo::Base::DBus;
+
 class EventLoop;
 
 // The installed applications: every .desktop file in the user's and the

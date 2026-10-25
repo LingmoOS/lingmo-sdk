@@ -23,6 +23,7 @@
 #include "wayland/connection.h"
 
 namespace Lingmo::UI {
+namespace dbus = Lingmo::Base::DBus;
 
 static Application* s_instance = nullptr;
 

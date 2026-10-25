@@ -10,6 +10,7 @@
 #include "base/locale.h"
 
 namespace Lingmo::Base {
+namespace dbus = Lingmo::Base::DBus;
 
 static constexpr const char* kService = "org.lingmo.Services";
 static constexpr const char* kPath = "/org/lingmo/Services/Language";

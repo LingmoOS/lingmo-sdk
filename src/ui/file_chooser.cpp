@@ -17,6 +17,7 @@
 #include "ui/window.h"
 
 namespace Lingmo::UI {
+namespace dbus = Lingmo::Base::DBus;
 
 static const char* const kPortalService = "org.freedesktop.portal.Desktop";
 static const char* const kPortalPath = "/org/freedesktop/portal/desktop";

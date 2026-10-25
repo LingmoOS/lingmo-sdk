@@ -9,6 +9,8 @@ namespace Lingmo::Base::DBus {
 class Connection;
 }
 
+namespace dbus = Lingmo::Base::DBus;
+
 namespace Lingmo::UI {
 
 // Keeps the theme in step with the user's appearance settings, which
@@ -17,7 +19,7 @@ class AppearanceWatcher
 {
 public:
     // Asks for the settings, then follows their change signals.
-    explicit AppearanceWatcher(base::dbus::Connection& connection);
+    explicit AppearanceWatcher(dbus::Connection& connection);
     ~AppearanceWatcher();
 
     AppearanceWatcher(const AppearanceWatcher&) = delete;

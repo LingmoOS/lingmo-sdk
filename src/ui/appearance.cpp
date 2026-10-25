@@ -11,6 +11,7 @@
 #include "ui/theme.h"
 
 namespace Lingmo::UI {
+namespace dbus = Lingmo::Base::DBus;
 
 static constexpr const char* kService = "org.lingmo.Services";
 static constexpr const char* kPath = "/org/lingmo/Services/Appearance";

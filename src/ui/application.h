@@ -22,6 +22,8 @@ namespace Lingmo::Base::DBus {
 class Connection;
 }
 
+namespace dbus = Lingmo::Base::DBus;
+
 namespace Lingmo::UI {
 
 class AppearanceWatcher;
