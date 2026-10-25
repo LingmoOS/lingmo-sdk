@@ -37,6 +37,8 @@ namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
 
+namespace ui = Lingmo::UI;
+
 namespace Lingmo::UI {
 
 std::vector<TextLineBox> textLineBoxes(textlayout::Paragraph* paragraph, const SkTypeface* typeface,

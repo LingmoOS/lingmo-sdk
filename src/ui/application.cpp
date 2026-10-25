@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "ui/application.h"
+#include "base/i18n.h"
 
 #include <clocale>
 #include <cstdlib>

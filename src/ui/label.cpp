@@ -29,10 +29,13 @@
 #include "ui/text_lines.h"
 #include "ui/theme.h"
 #include "ui/window.h"
+#include "base/i18n.h"
 namespace base = Lingmo::Base;
 namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
+
+namespace ui = Lingmo::UI;
 
 namespace Lingmo::UI {
 

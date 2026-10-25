@@ -32,6 +32,8 @@ namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
 
+namespace ui = Lingmo::UI;
+
 namespace Lingmo::UI {
 
 // A coarse timer of half the cursor flash time fires up to 5% early.
