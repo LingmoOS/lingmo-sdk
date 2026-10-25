@@ -260,13 +260,14 @@ target_sources(lingmo-sdk PRIVATE ${LINGMO_TOOLKIT_EMBEDDED})
 
 add_library(Lingmo::SDK ALIAS lingmo-sdk)
 
-# Only the toolkit's own symbols: Skia's inline functions and the
-# generated protocol code stay out of the processes that load it, the
-# compositor's included.
-target_link_options(lingmo-sdk PRIVATE
-    -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/lingmo-sdk.map)
-set_property(TARGET lingmo-sdk APPEND PROPERTY
-    LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/lingmo-sdk.map)
+# Symbol visibility is controlled by -fvisibility=hidden and explicit
+# LINGMO_EXPORT annotations rather than a version script, which proved
+# fragile across toolchain versions.
+# target_link_options(lingmo-sdk PRIVATE
+#     -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/lingmo-sdk.map)
+# set_property(TARGET lingmo-sdk APPEND PROPERTY
+#     LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/lingmo-sdk.map)
+
 
 set_target_properties(lingmo-sdk PROPERTIES
     VERSION ${PROJECT_VERSION}
