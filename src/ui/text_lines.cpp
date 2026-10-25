@@ -29,9 +29,11 @@
 #include "modules/skparagraph/include/Paragraph.h"
 #include "modules/skparagraph/src/ParagraphPainterImpl.h"
 
+#include "base/i18n.h"
 #include "ui/application.h"
 #include "ui/line_breaks.h"
 #include "ui/text_context.h"
+
 namespace base = Lingmo::Base;
 namespace i18n = Lingmo::I18n;
 

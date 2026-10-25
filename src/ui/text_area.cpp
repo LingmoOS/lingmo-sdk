@@ -15,6 +15,7 @@
 #include "modules/skparagraph/include/ParagraphStyle.h"
 
 #include "base/event_loop.h"
+#include "base/i18n.h"
 #include "ui/application.h"
 #include "ui/clipboard.h"
 #include "ui/editable_text.h"
