@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(lingmo-sdk
     VERSION 1.0
-    DESCRIPTION "Cutefish UI toolkit"
+    DESCRIPTION "Lingmo SDK"
     LANGUAGES C CXX
 )
 
