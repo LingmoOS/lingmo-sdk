@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends: cmake,
-               debhelper-compat (= 14),
+               debhelper-compat (= 13),
                clang,
                generate-ninja,
                ninja-build,
