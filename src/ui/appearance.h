@@ -4,6 +4,9 @@
 
 #pragma once
 
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 #include <systemd/sd-bus.h>
 
 namespace Lingmo::Base::DBus {
@@ -38,7 +41,7 @@ private:
     static int replied(sd_bus_message* reply, void* data, sd_bus_error* error);
     static void apply(sd_bus_message* reply);
 
-    base::dbus::Connection& m_connection;
+    dbus::Connection& m_connection;
     sd_bus_slot* m_match = nullptr;
     sd_bus_slot* m_call = nullptr;
     // The first reply, held until waitForSettings() applies it.

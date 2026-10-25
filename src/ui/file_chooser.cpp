@@ -1,3 +1,6 @@
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -40,9 +43,9 @@ struct FileChooser::Request
     std::string token;
     bool save = false;
     std::string title;
-    base::dbus::VariantMap options;
-    base::dbus::Match response;
-    base::dbus::PendingCall call;
+    dbus::VariantMap options;
+    dbus::Match response;
+    dbus::PendingCall call;
 };
 
 FileChooser::Filter FileChooser::Filter::fromNameFilter(std::string_view nameFilter)
@@ -185,7 +188,7 @@ void FileChooser::close()
 {
     if (!m_request)
         return;
-    base::dbus::Connection* bus = Application::instance() ? Application::instance()->sessionBus() : nullptr;
+    dbus::Connection* bus = Application::instance() ? Application::instance()->sessionBus() : nullptr;
     if (bus && !m_request->path.empty())
         bus->send(bus->newMethodCall(kPortalService, m_request->path, kRequestInterface, "Close"));
     m_request.reset();
@@ -194,7 +197,7 @@ void FileChooser::close()
 void FileChooser::open()
 {
     close();
-    base::dbus::Connection* bus = Application::instance() ? Application::instance()->sessionBus() : nullptr;
+    dbus::Connection* bus = Application::instance() ? Application::instance()->sessionBus() : nullptr;
     if (!bus) {
         // Answered from the loop, as the portal's answer would be.
         base::EventLoop::current()->post([callback = onRejected] {
@@ -208,23 +211,23 @@ void FileChooser::open()
     const bool folder = m_mode == Mode::OpenFolder;
     std::random_device random;
     const std::string token = "lingmo" + std::to_string(random());
-    base::dbus::VariantMap options;
-    options["handle_token"] = base::dbus::Variant(token);
-    options["modal"] = base::dbus::Variant(m_modal);
+    dbus::VariantMap options;
+    options["handle_token"] = dbus::Variant(token);
+    options["modal"] = dbus::Variant(m_modal);
     if (!save) {
-        options["multiple"] = base::dbus::Variant(m_mode == Mode::OpenFiles);
-        options["directory"] = base::dbus::Variant(folder);
+        options["multiple"] = dbus::Variant(m_mode == Mode::OpenFiles);
+        options["directory"] = dbus::Variant(folder);
     }
     if (!m_acceptLabel.empty())
-        options["accept_label"] = base::dbus::Variant(m_acceptLabel);
+        options["accept_label"] = dbus::Variant(m_acceptLabel);
     if (!m_filters.empty()) {
         std::vector<PortalFilter> filters;
         for (const Filter& filter : m_filters) {
             filters.push_back(portalFilter(filter));
             if (filter.name == m_currentFilter)
-                options["current_filter"] = base::dbus::Variant(portalFilter(filter));
+                options["current_filter"] = dbus::Variant(portalFilter(filter));
         }
-        options["filters"] = base::dbus::Variant(filters);
+        options["filters"] = dbus::Variant(filters);
     }
     if (!m_choices.empty()) {
         std::vector<PortalChoice> choices;
@@ -234,15 +237,15 @@ void FileChooser::open()
                 values.emplace_back(id, label);
             choices.emplace_back(choice.id, choice.label, std::move(values), choice.selected);
         }
-        options["choices"] = base::dbus::Variant(choices);
+        options["choices"] = dbus::Variant(choices);
     }
     if (!m_currentFolder.empty())
-        options["current_folder"] = base::dbus::Variant(portalPath(m_currentFolder));
+        options["current_folder"] = dbus::Variant(portalPath(m_currentFolder));
     if (save && !m_currentFile.empty()) {
         if (access(m_currentFile.c_str(), F_OK) == 0)
-            options["current_file"] = base::dbus::Variant(portalPath(m_currentFile));
+            options["current_file"] = dbus::Variant(portalPath(m_currentFile));
         const size_t slash = m_currentFile.rfind('/');
-        options["current_name"] = base::dbus::Variant(
+        options["current_name"] = dbus::Variant(
                 slash == std::string::npos ? m_currentFile : m_currentFile.substr(slash + 1));
     }
     std::string title = m_title;
@@ -270,7 +273,7 @@ void FileChooser::open()
 
 void FileChooser::call(Request* current, const std::string& parentWindow)
 {
-    base::dbus::Connection* bus = Application::instance() ? Application::instance()->sessionBus() : nullptr;
+    dbus::Connection* bus = Application::instance() ? Application::instance()->sessionBus() : nullptr;
     if (!bus)
         return;
     // The request's path follows from the token, so its answer is listened for
@@ -281,16 +284,16 @@ void FileChooser::call(Request* current, const std::string& parentWindow)
     std::replace(sender.begin(), sender.end(), '.', '_');
     const auto listen = [this, bus, current](const std::string& path) {
         current->path = path;
-        base::dbus::MatchRule rule;
+        dbus::MatchRule rule;
         rule.sender = kPortalService;
         rule.path = path;
         rule.interface = kRequestInterface;
         rule.member = "Response";
-        current->response = bus->subscribe(rule, [this, current](const base::dbus::Message& message) {
+        current->response = bus->subscribe(rule, [this, current](const dbus::Message& message) {
             if (m_request.get() != current)
                 return;
             uint32_t response = 2;
-            base::dbus::VariantMap results;
+            dbus::VariantMap results;
             message.read(response, results);
             // The subscription answering goes once the loop is back.
             base::EventLoop::current()->post([finished = std::shared_ptr<Request>(std::move(m_request))] {});
@@ -322,10 +325,10 @@ void FileChooser::call(Request* current, const std::string& parentWindow)
     };
     listen(std::string(kPortalPath) + "/request/" + sender + "/" + current->token);
 
-    base::dbus::Message message = bus->newMethodCall(kPortalService, kPortalPath, kFileChooserInterface,
+    dbus::Message message = bus->newMethodCall(kPortalService, kPortalPath, kFileChooserInterface,
                                                      current->save ? "SaveFile" : "OpenFile");
     message.append(parentWindow, current->title, current->options);
-    current->call = bus->callAsync(message, [this, current, listen](const base::dbus::Reply& reply) {
+    current->call = bus->callAsync(message, [this, current, listen](const dbus::Reply& reply) {
         if (m_request.get() != current)
             return;
         if (reply.isError()) {
@@ -336,7 +339,7 @@ void FileChooser::call(Request* current, const std::string& parentWindow)
             return;
         }
         // An older portal ignores the token and picks the path itself.
-        const std::string path = reply.value<base::dbus::ObjectPath>(0).value_or(base::dbus::ObjectPath{}).path;
+        const std::string path = reply.value<dbus::ObjectPath>(0).value_or(dbus::ObjectPath{}).path;
         if (!path.empty() && path != current->path)
             listen(path);
     });

@@ -4,6 +4,9 @@
 
 #pragma once
 
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 #include <optional>
 
 #include "base/signal.h"

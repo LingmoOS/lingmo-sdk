@@ -4,6 +4,9 @@
 
 #pragma once
 
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 #include <map>
 #include <memory>
 #include <string>
@@ -91,7 +94,7 @@ public:
     TextContext& text() const;
 
     // The loop's shared session bus connection, when there is one.
-    base::dbus::Connection* sessionBus() const { return m_sessionBus; }
+    dbus::Connection* sessionBus() const { return m_sessionBus; }
     const std::vector<Window*>& windows() const { return m_windows; }
 
     struct Screen
@@ -124,7 +127,7 @@ public:
     base::Signal<> languageChanged;
     // Applications on Wayland follow lingmo-services on their own; a host
     // whose application has no session bus, as the compositor's, lends its.
-    void followSessionLanguage(base::dbus::Connection* bus);
+    void followSessionLanguage(dbus::Connection* bus);
     // LANG, LANGUAGE and the LC_ variables, an empty value removing one.
     void setLanguageEnvironment(const std::map<std::string, std::string>& variables);
 
@@ -151,7 +154,7 @@ private:
     mutable std::unique_ptr<TextContext> m_text;
     mutable std::thread m_textLoader;
     mutable bool m_fontsChangedWhileLoading = false;
-    base::dbus::Connection* m_sessionBus = nullptr;
+    dbus::Connection* m_sessionBus = nullptr;
     std::unique_ptr<AppearanceWatcher> m_appearance;
     std::unique_ptr<base::SessionLanguage> m_languageWatch;
     base::Subscription m_languageChanged;

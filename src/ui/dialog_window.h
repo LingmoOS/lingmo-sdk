@@ -4,6 +4,9 @@
 
 #pragma once
 
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 #include <functional>
 #include <memory>
 #include <string>

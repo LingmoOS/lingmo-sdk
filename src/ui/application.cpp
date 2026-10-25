@@ -1,3 +1,6 @@
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -64,7 +67,7 @@ Application::Application(int argc, char** argv, Platform platform)
     // The appearance settings are on their way and the driver loads while
     // the fonts are read.
     if (platform == Platform::Wayland) {
-        m_sessionBus = base::dbus::Connection::session(m_loop);
+        m_sessionBus = dbus::Connection::session(m_loop);
         if (m_sessionBus)
             m_appearance = std::make_unique<AppearanceWatcher>(*m_sessionBus);
         m_connection = wayland::Connection::open(*m_loop);
@@ -142,7 +145,7 @@ void Application::setApplicationId(std::string applicationId)
     }
 }
 
-void Application::followSessionLanguage(base::dbus::Connection* bus)
+void Application::followSessionLanguage(dbus::Connection* bus)
 {
     m_languageWatch = std::make_unique<base::SessionLanguage>(bus);
     m_languageChanged = m_languageWatch->changed.connect([this] { languageEnvironmentChanged(); });

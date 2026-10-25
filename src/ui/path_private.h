@@ -4,6 +4,9 @@
 
 #pragma once
 
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 #include "include/core/SkPath.h"
 #include "base/transform.h"
 #include "ui/path.h"

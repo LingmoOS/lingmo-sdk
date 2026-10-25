@@ -1,3 +1,6 @@
+namespace Lingmo::Base { class EventLoop; }
+namespace base = Lingmo::Base;
+
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -23,7 +26,7 @@ static const Color kAccents[] = {
     accent::blue, accent::red, accent::green, accent::purple, accent::pink, accent::orange, accent::grey,
 };
 
-AppearanceWatcher::AppearanceWatcher(base::dbus::Connection& connection)
+AppearanceWatcher::AppearanceWatcher(dbus::Connection& connection)
     : m_connection(connection)
 {
     sd_bus* bus = connection.bus();
