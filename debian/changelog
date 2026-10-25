@@ -1,4 +1,4 @@
-lingmo-toolkit (5.0.0+lingmo5u1) unstable; urgency=medium
+lingmo-sdk (5.0.0+lingmo5u1) unstable; urgency=medium
 
   * Initial release.
   * Version every Lingmo package 1.0.

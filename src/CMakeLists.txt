@@ -129,7 +129,7 @@ set(CUTEFISH_TOOLKIT_PUBLIC_HEADERS
     ui/window_tab_bar.h
 )
 
-add_library(lingmo-toolkit SHARED
+add_library(lingmo-sdk SHARED
     gpu/egl_context.cpp
     gpu/program_cache.cpp
     wayland/connection.cpp
@@ -256,34 +256,34 @@ add_custom_command(OUTPUT ${CUTEFISH_TOOLKIT_EMBEDDED}
             -DFILES=${CUTEFISH_TOOLKIT_ICON_LIST} -P ${PROJECT_SOURCE_DIR}/cmake/EmbedFiles.cmake
     DEPENDS ${CUTEFISH_TOOLKIT_ICONS} ${PROJECT_SOURCE_DIR}/cmake/EmbedFiles.cmake
     VERBATIM)
-target_sources(lingmo-toolkit PRIVATE ${CUTEFISH_TOOLKIT_EMBEDDED})
+target_sources(lingmo-sdk PRIVATE ${CUTEFISH_TOOLKIT_EMBEDDED})
 
-add_library(Lingmo::Toolkit ALIAS lingmo-toolkit)
+add_library(Lingmo::SDK ALIAS lingmo-sdk)
 
 # Only the toolkit's own symbols: Skia's inline functions and the
 # generated protocol code stay out of the processes that load it, the
 # compositor's included.
-target_link_options(lingmo-toolkit PRIVATE
-    -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/lingmo-toolkit.map)
-set_property(TARGET lingmo-toolkit APPEND PROPERTY
-    LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/lingmo-toolkit.map)
+target_link_options(lingmo-sdk PRIVATE
+    -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/lingmo-sdk.map)
+set_property(TARGET lingmo-sdk APPEND PROPERTY
+    LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/lingmo-sdk.map)
 
-set_target_properties(lingmo-toolkit PROPERTIES
+set_target_properties(lingmo-sdk PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
     EXPORT_NAME Toolkit
 )
 
-target_include_directories(lingmo-toolkit
+target_include_directories(lingmo-sdk
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lingmo-toolkit>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk>
     PRIVATE ${CUTEFISH_PROTOCOL_DIR}
 )
 
-target_link_libraries(lingmo-toolkit
+target_link_libraries(lingmo-sdk
     PUBLIC
-        lingmo-toolkit-base
+        lingmo-sdk-base
     PRIVATE
         skia
         PkgConfig::WaylandClient
@@ -296,22 +296,22 @@ target_link_libraries(lingmo-toolkit
         PkgConfig::Icu
         ${CMAKE_DL_LIBS}
 )
-target_include_directories(lingmo-toolkit PRIVATE ${Jxl_INCLUDE_DIRS})
-target_compile_definitions(lingmo-toolkit PRIVATE
+target_include_directories(lingmo-sdk PRIVATE ${Jxl_INCLUDE_DIRS})
+target_compile_definitions(lingmo-sdk PRIVATE
     CUTEFISH_JXL_LIBRARY="${CUTEFISH_jxl_SONAME}"
     CUTEFISH_JXL_THREADS_LIBRARY="${CUTEFISH_jxl_threads_SONAME}"
 )
 
-install(TARGETS lingmo-toolkit EXPORT LingmoToolkitTargets
+install(TARGETS lingmo-sdk EXPORT LingmoSDKTargets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 foreach(header ${CUTEFISH_TOOLKIT_PUBLIC_HEADERS})
     get_filename_component(directory ${header} DIRECTORY)
-    install(FILES ${header} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lingmo-toolkit/${directory})
+    install(FILES ${header} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk/${directory})
 endforeach()
 
-install(EXPORT LingmoToolkitTargets
+install(EXPORT LingmoSDKTargets
     NAMESPACE Lingmo::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/LingmoToolkit
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/LingmoSDK
 )

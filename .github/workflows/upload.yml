@@ -38,7 +38,7 @@ jobs:
         uses: LingmoOS/action-upload-to-obs@0.0.4
         with:
           remove-old-sources: true
-          obs-package-name: 'lingmo-toolkit'
+          obs-package-name: 'lingmo-sdk'
           obs-project-name: 'home:LingmoOS'
           obs-user-name: ${{ secrets.OBS_USERNAME }}
           obs-password: ${{ secrets.OBS_TOKEN }}

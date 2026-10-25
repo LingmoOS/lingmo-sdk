@@ -2,7 +2,7 @@ find_package(GTest REQUIRED)
 include(GoogleTest)
 
 # Linked against the base library alone, which proves it needs no display.
-add_executable(lingmo-toolkit-base-tests
+add_executable(lingmo-sdk-base-tests
     base/collator_test.cpp
     base/dbus_test.cpp
     base/desktop_entry_test.cpp
@@ -28,11 +28,11 @@ add_executable(lingmo-toolkit-base-tests
     base/user_directory_test.cpp
 )
 
-target_link_libraries(lingmo-toolkit-base-tests PRIVATE lingmo-toolkit-base GTest::gtest_main)
+target_link_libraries(lingmo-sdk-base-tests PRIVATE lingmo-sdk-base GTest::gtest_main)
 
-gtest_discover_tests(lingmo-toolkit-base-tests)
+gtest_discover_tests(lingmo-sdk-base-tests)
 
-add_executable(lingmo-toolkit-tests
+add_executable(lingmo-sdk-tests
     main.cpp
     about_dialog_test.cpp
     animation_test.cpp
@@ -79,17 +79,17 @@ add_executable(lingmo-toolkit-tests
 
 # The image tests write their files with the codecs' own encoders.
 pkg_check_modules(ImageTestEncoders REQUIRED IMPORTED_TARGET libjpeg libpng libwebp libtiff-4 libjxl libheif)
-target_link_libraries(lingmo-toolkit-tests PRIVATE lingmo-toolkit GTest::gtest PkgConfig::ImageTestEncoders)
-target_compile_definitions(lingmo-toolkit-tests
+target_link_libraries(lingmo-sdk-tests PRIVATE lingmo-sdk GTest::gtest PkgConfig::ImageTestEncoders)
+target_compile_definitions(lingmo-sdk-tests
     PRIVATE CUTEFISH_TOOLKIT_PROTOCOL_DIR="${PROJECT_SOURCE_DIR}/protocols"
     CUTEFISH_TOOLKIT_TEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 
-gtest_discover_tests(lingmo-toolkit-tests)
+gtest_discover_tests(lingmo-sdk-tests)
 # Read after the discovered tests, which it needs to exist.
 set_property(DIRECTORY APPEND PROPERTY TEST_INCLUDE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/serial_tests.cmake)
 
 # One Application per process: the embedded platform gets its own binary.
-add_executable(lingmo-toolkit-embedded-tests
+add_executable(lingmo-sdk-embedded-tests
     embedded/main.cpp
     embedded/embedded_window_test.cpp
     embedded/embedded_controls_test.cpp
@@ -97,10 +97,10 @@ add_executable(lingmo-toolkit-embedded-tests
     embedded/embedded_host_test.cpp
 )
 
-target_link_libraries(lingmo-toolkit-embedded-tests PRIVATE lingmo-toolkit GTest::gtest PkgConfig::Xkbcommon
+target_link_libraries(lingmo-sdk-embedded-tests PRIVATE lingmo-sdk GTest::gtest PkgConfig::Xkbcommon
     PkgConfig::Egl PkgConfig::GlesV2)
 
-gtest_discover_tests(lingmo-toolkit-embedded-tests)
+gtest_discover_tests(lingmo-sdk-embedded-tests)
 
 # A connection against a minimal compositor in the test, on libwayland-server.
 pkg_check_modules(WaylandServer REQUIRED IMPORTED_TARGET wayland-server)
@@ -137,7 +137,7 @@ foreach(name lingmo-window-hints-v1 lingmo-window-placement-v1 lingmo-status-ite
     list(APPEND TEST_PROTOCOL_SOURCES ${code} ${header})
 endforeach()
 
-add_executable(lingmo-toolkit-wayland-tests
+add_executable(lingmo-sdk-wayland-tests
     wayland/connection_test.cpp
     wayland/data_device_test.cpp
     wayland/output_test.cpp
@@ -147,8 +147,8 @@ add_executable(lingmo-toolkit-wayland-tests
     wayland/window_hints_test.cpp
     ${TEST_PROTOCOL_SOURCES}
 )
-target_include_directories(lingmo-toolkit-wayland-tests PRIVATE ${TEST_PROTOCOL_DIR})
-target_link_libraries(lingmo-toolkit-wayland-tests PRIVATE lingmo-toolkit GTest::gtest_main
+target_include_directories(lingmo-sdk-wayland-tests PRIVATE ${TEST_PROTOCOL_DIR})
+target_link_libraries(lingmo-sdk-wayland-tests PRIVATE lingmo-sdk GTest::gtest_main
     PkgConfig::WaylandServer PkgConfig::WaylandClient PkgConfig::Xkbcommon Threads::Threads)
 
-gtest_discover_tests(lingmo-toolkit-wayland-tests)
+gtest_discover_tests(lingmo-sdk-wayland-tests)

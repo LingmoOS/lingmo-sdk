@@ -38,7 +38,7 @@ set(LINGMO_TOOLKIT_BASE_PUBLIC_HEADERS
     weak_ptr.h
 )
 
-add_library(lingmo-toolkit-base SHARED
+add_library(lingmo-sdk-base SHARED
     application_registry.cpp
     collator.cpp
     command_line.cpp
@@ -70,35 +70,35 @@ add_library(lingmo-toolkit-base SHARED
     uuid.cpp
 )
 
-add_library(Lingmo::ToolkitBase ALIAS lingmo-toolkit-base)
+add_library(Lingmo::SDKBase ALIAS lingmo-sdk-base)
 
-set_target_properties(lingmo-toolkit-base PROPERTIES
+set_target_properties(lingmo-sdk-base PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
     EXPORT_NAME ToolkitBase
 )
 
-target_include_directories(lingmo-toolkit-base
+target_include_directories(lingmo-sdk-base
     PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lingmo-toolkit>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk>
 )
 
-target_compile_definitions(lingmo-toolkit-base PRIVATE
+target_compile_definitions(lingmo-sdk-base PRIVATE
     LINGMO_LOCALE_DIR="${CMAKE_INSTALL_FULL_LOCALEDIR}"
 )
 
-target_link_libraries(lingmo-toolkit-base
+target_link_libraries(lingmo-sdk-base
     PRIVATE
         PkgConfig::Icu
         PkgConfig::Systemd
         Threads::Threads
 )
 
-install(TARGETS lingmo-toolkit-base EXPORT LingmoToolkitTargets
+install(TARGETS lingmo-sdk-base EXPORT LingmoSDKTargets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 install(FILES ${LINGMO_TOOLKIT_BASE_PUBLIC_HEADERS}
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lingmo-toolkit/base
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk/base
 )

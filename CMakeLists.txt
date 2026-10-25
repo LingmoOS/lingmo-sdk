@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(lingmo-toolkit
+project(lingmo-sdk
     VERSION 1.0
     DESCRIPTION "Cutefish UI toolkit"
     LANGUAGES C CXX
@@ -58,20 +58,20 @@ if(BUILD_TESTING)
     add_subdirectory(tests)
 endif()
 
-lingmo_add_translations(lingmo-toolkit SOURCES src/base src/ui)
+lingmo_add_translations(lingmo-sdk SOURCES src/base src/ui)
 
-configure_package_config_file(cmake/LingmoToolkitConfig.cmake.in
-    ${CMAKE_CURRENT_BINARY_DIR}/LingmoToolkitConfig.cmake
-    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/LingmoToolkit
+configure_package_config_file(cmake/LingmoSDKConfig.cmake.in
+    ${CMAKE_CURRENT_BINARY_DIR}/LingmoSDKConfig.cmake
+    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/LingmoSDK
 )
-write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/LingmoToolkitConfigVersion.cmake
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/LingmoSDKConfigVersion.cmake
     COMPATIBILITY SameMajorVersion
 )
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/LingmoToolkitConfig.cmake
-    ${CMAKE_CURRENT_BINARY_DIR}/LingmoToolkitConfigVersion.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/LingmoSDKConfig.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/LingmoSDKConfigVersion.cmake
     cmake/LingmoTranslations.cmake
     cmake/LingmoTranslationsUpdate.cmake
     cmake/LingmoTranslationsCheck.cmake
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/LingmoToolkit
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/LingmoSDK
 )

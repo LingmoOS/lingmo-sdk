@@ -1,4 +1,4 @@
-Source: lingmo-toolkit
+Source: lingmo-sdk
 Section: libs
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
@@ -29,14 +29,14 @@ Build-Depends: cmake,
                libheif-dev,
                libjxl-dev
 Standards-Version: 4.7.2
-Homepage: https://github.com/lingmoos/lingmo-toolkit
+Homepage: https://github.com/lingmoos/lingmo-sdk
 
-Package: lingmo-toolkit
+Package: lingmo-sdk
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Recommends: libjxl0.11
-Description: Lingmo UI toolkit
- The toolkit every Lingmo application is built with: a Wayland client for
+Description: Lingmo SDK
+ The SDK every Lingmo application is built with: a Wayland client for
  lingmo-compositor that draws with Skia on GLES, with retained views, text
  layout, controls and frame-paced animation.
