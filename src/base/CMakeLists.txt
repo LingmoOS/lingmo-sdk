@@ -6,6 +6,7 @@ set(LINGMO_TOOLKIT_BASE_PUBLIC_HEADERS
     byte_stream.h
     collator.h
     command_line.h
+    compat.h
     dbus.h
     dbus_types.h
     elapsed_timer.h
@@ -82,6 +83,18 @@ target_include_directories(lingmo-sdk-base
     PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/lingmo-sdk>
+)
+
+# The desktop's sources spell the toolkit's namespaces the way the Cutefish
+# toolkit did; compat.h aliases them. Force-included, it comes before the
+# headers that use the names, in every translation unit that links the
+# toolkit.
+target_compile_options(lingmo-sdk-base
+    INTERFACE
+        $<BUILD_INTERFACE:-include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/compat.h>
+        $<INSTALL_INTERFACE:-include>
+        $<INSTALL_INTERFACE:base/compat.h>
 )
 
 target_compile_definitions(lingmo-sdk-base PRIVATE
