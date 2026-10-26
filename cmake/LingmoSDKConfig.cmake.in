@@ -2,4 +2,20 @@
 
 include("${CMAKE_CURRENT_LIST_DIR}/LingmoSDKTargets.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/LingmoTranslations.cmake")
+
+# Provide Lingmo::SDKBase alias for lingmo-sdk-base target
+if(TARGET lingmo-sdk-base AND NOT TARGET Lingmo::SDKBase)
+    add_library(Lingmo::SDKBase ALIAS lingmo-sdk-base)
+endif()
+
+# Provide Lingmo::SDK alias for lingmo-sdk target
+if(TARGET lingmo-sdk AND NOT TARGET Lingmo::SDK)
+    add_library(Lingmo::SDK ALIAS lingmo-sdk)
+endif()
+
+# Legacy alias
+if(TARGET lingmo-sdk AND NOT TARGET Lingmo::ToolkitBase)
+    add_library(Lingmo::ToolkitBase ALIAS lingmo-sdk-base)
+endif()
+
 check_required_components(LingmoSDK)
