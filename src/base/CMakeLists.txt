@@ -75,7 +75,7 @@ add_library(Lingmo::SDKBase ALIAS lingmo-sdk-base)
 set_target_properties(lingmo-sdk-base PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
-    EXPORT_NAME ToolkitBase
+    EXPORT_NAME SDKBase
 )
 
 target_include_directories(lingmo-sdk-base

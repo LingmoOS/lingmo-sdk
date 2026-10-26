@@ -272,7 +272,7 @@ add_library(Lingmo::SDK ALIAS lingmo-sdk)
 set_target_properties(lingmo-sdk PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
-    EXPORT_NAME Toolkit
+    EXPORT_NAME SDK
 )
 
 target_include_directories(lingmo-sdk
