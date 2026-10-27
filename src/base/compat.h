@@ -24,6 +24,7 @@ namespace Lingmo::I18n {}
 namespace Lingmo {
 namespace Base = base;
 namespace UI = ui;
+namespace i18n = I18n;
 } // namespace Lingmo
 
 // Lingmo::Base::DBus is how the core names the bus namespace.
