@@ -12,7 +12,7 @@
 
 namespace Lingmo::base {
 
-namespace DBus {
+namespace dbus {
 class Connection;
 }
 
