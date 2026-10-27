@@ -38,7 +38,7 @@
 #include "ui/window_header.h"
 #include "wayland/wayland_window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr uint64_t kDoubleClickNs = 400000000;
 static constexpr auto kToolTipDelay = std::chrono::milliseconds(700);
@@ -120,7 +120,7 @@ static std::string typeName(const View& view)
     char* demangled = abi::__cxa_demangle(mangled, nullptr, nullptr, &status);
     std::string name = status == 0 ? demangled : mangled;
     free(demangled);
-    const std::string prefix = "Lingmo::UI::";
+    const std::string prefix = "Lingmo::ui::";
     if (name.starts_with(prefix))
         name.erase(0, prefix.size());
     return name;
@@ -1745,4 +1745,4 @@ void Window::interruptFrameClients(int interruption)
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -25,7 +25,7 @@ namespace skia::textlayout {
 class FontCollection;
 }
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A font's vertical metrics, in logical pixels.
 struct VerticalMetrics
@@ -148,4 +148,4 @@ private:
     SkPixelGeometry m_pixelGeometry = kUnknown_SkPixelGeometry;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

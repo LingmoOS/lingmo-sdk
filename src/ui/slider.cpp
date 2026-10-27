@@ -16,7 +16,7 @@
 #include "ui/smooth_rectangle.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double kTrack = 4;
 static constexpr double kHandle = 22;
@@ -305,4 +305,4 @@ bool Slider::keyPress(const KeyEvent& event)
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

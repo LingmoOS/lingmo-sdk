@@ -20,7 +20,7 @@
 #include "ui/text_field.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Three medium icons and a large spacing wide, as tall as a text field.
 static constexpr double kMinimumWidth = 3 * 32 + 12;
@@ -406,4 +406,4 @@ bool ComboBox::keyPress(const KeyEvent& event)
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

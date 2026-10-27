@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <functional>
 #include <memory>
@@ -15,7 +15,7 @@ namespace base = Lingmo::Base;
 #include "base/signal.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Label;
 class Window;
@@ -145,4 +145,4 @@ private:
     base::Subscription m_languageChanged;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

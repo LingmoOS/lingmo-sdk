@@ -11,7 +11,7 @@
 
 #include "base/file.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 static bool startsWith(std::string_view text, std::string_view prefix)
 {
@@ -796,4 +796,4 @@ std::string Settings::formatDouble(double value)
     return std::string(buffer, end);
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

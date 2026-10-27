@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <optional>
 
@@ -13,7 +13,7 @@ namespace base = Lingmo::Base;
 #include "ui/color_mixer.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class ScrollView;
 
@@ -53,4 +53,4 @@ private:
     base::Subscription m_scrolled;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

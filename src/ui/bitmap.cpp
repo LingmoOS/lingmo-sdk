@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -26,7 +26,7 @@ namespace base = Lingmo::Base;
 #include "ui/bitmap_private.h"
 #include "ui/image_decoder.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // As the decoders' limit: no bitmap past 256 MiB.
 static constexpr size_t kMaxBytes = size_t(256) << 20;
@@ -371,4 +371,4 @@ base::Size scaledSize(base::Size size, base::Size box, Bitmap::Scaling scaling)
     return {width, height};
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

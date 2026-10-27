@@ -7,7 +7,7 @@
 #include "ui/application.h"
 #include "ui/text_context.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static Theme s_current = Theme::light();
 static uint64_t s_generation = 0;
@@ -61,4 +61,4 @@ uint64_t Theme::generation()
     return s_generation;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

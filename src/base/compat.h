@@ -1,11 +1,12 @@
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-// The toolkit's declarations live in Lingmo::Base, Lingmo::Base::DBus,
-// Lingmo::UI and Lingmo::I18n. The desktop's sources, ported from the
-// Cutefish toolkit, spell them base::, dbus::, ui:: and i18n::, and some of
-// them the Lingmo:: names in their lower-case form. This header aliases the
-// spellings so either way compiles.
+// The toolkit's declarations live in Lingmo::base, Lingmo::base::dbus,
+// Lingmo::ui and Lingmo::I18n. The desktop's sources were ported from the
+// Cutefish toolkit and spell them base::, dbus::, ui:: and i18n::; the
+// framework, the core and the compositor also name them Lingmo::Base,
+// Lingmo::Base::DBus and Lingmo::UI. This header aliases both older
+// spellings.
 //
 // The toolkit's CMake target force-includes it, so it comes before any
 // header that relies on the names, without every source having to include
@@ -14,26 +15,25 @@
 
 #ifdef __cplusplus
 
-namespace Lingmo::Base {}
-namespace Lingmo::Base::DBus {}
-namespace Lingmo::UI {}
+namespace Lingmo::base {}
+namespace Lingmo::base::dbus {}
+namespace Lingmo::ui {}
 namespace Lingmo::I18n {}
 
+// The capitalised spellings the framework, core and compositor use.
 namespace Lingmo {
-namespace base = Base;
-namespace ui = UI;
-namespace dbus = Base::DBus;
-namespace i18n = I18n;
+namespace Base = base;
+namespace UI = ui;
 } // namespace Lingmo
 
-// base::dbus:: is how the sources nest the bus classes inside base.
-namespace Lingmo::Base {
-namespace dbus = DBus;
-} // namespace Lingmo::Base
+// Lingmo::Base::DBus is how the core names the bus namespace.
+namespace Lingmo::base {
+namespace DBus = dbus;
+} // namespace Lingmo::base
 
-namespace base = Lingmo::Base;
-namespace dbus = Lingmo::Base::DBus;
-namespace ui = Lingmo::UI;
+namespace base = Lingmo::base;
+namespace dbus = Lingmo::base::dbus;
+namespace ui = Lingmo::ui;
 namespace i18n = Lingmo::I18n;
 
 #endif // __cplusplus

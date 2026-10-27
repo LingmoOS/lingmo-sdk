@@ -12,7 +12,7 @@
 namespace i18n = Lingmo::I18n;
 
 // The toolkit's own text, in its own catalog whatever the program's domain.
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 inline constexpr const char* kTranslationDomain = "lingmo-toolkit";
 
@@ -31,4 +31,4 @@ inline std::string trn(const char* singular, const char* plural, uint64_t n)
     return i18n::dtrn(kTranslationDomain, singular, plural, n);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

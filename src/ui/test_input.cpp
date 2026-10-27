@@ -19,7 +19,7 @@
 
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 void TestInput::movePointer(Window& window, PointF position)
 {
@@ -232,4 +232,4 @@ uint32_t TestInput::drop(Window& window)
     return window.handleDrop();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -9,7 +9,7 @@
 #include <string>
 #include <string_view>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // SHA-1 and SHA-256 (FIPS 180-4), fed in pieces. For keys and checksums, not
 // for anything secret.
@@ -40,4 +40,4 @@ private:
     uint64_t m_length = 0;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

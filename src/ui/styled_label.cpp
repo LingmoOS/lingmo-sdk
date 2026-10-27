@@ -6,7 +6,7 @@
 
 #include <utility>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 StyledLabel::StyledLabel(std::string text)
     : Label(std::move(text))
@@ -41,4 +41,4 @@ void StyledLabel::paint(Painter& painter)
     paintText(painter, {}, std::nullopt);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

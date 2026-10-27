@@ -13,7 +13,7 @@
 #include "ui/color_mixer.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A single-line text field. Positions are UTF-8 byte offsets; input
 // methods compose text in it while it has focus, and only then.
@@ -146,4 +146,4 @@ private:
     std::unique_ptr<Private> d;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

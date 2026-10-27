@@ -4,18 +4,18 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <systemd/sd-bus.h>
 
-namespace Lingmo::Base::DBus {
+namespace Lingmo::base::dbus {
 class Connection;
 }
 
-namespace dbus = Lingmo::Base::DBus;
+namespace dbus = Lingmo::base::dbus;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Keeps the theme in step with the user's appearance settings, which
 // lingmo-services keeps: dark mode, accent colour, font and icon theme.
@@ -49,4 +49,4 @@ private:
     sd_bus_message* m_firstReply = nullptr;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -10,7 +10,7 @@
 
 #include "ui/frame_client.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Runs on its window's frames: every rendered frame ticks it once.
 class Animation : public FrameClient
@@ -62,4 +62,4 @@ private:
     uint64_t m_elapsedNs = 0;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

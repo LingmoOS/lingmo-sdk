@@ -13,7 +13,7 @@
 #include <unicode/utf16.h>
 #include <unicode/utf8.h>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // Guards the lazy open; compare() on an open collator needs no lock.
 static std::mutex s_openMutex;
@@ -171,4 +171,4 @@ std::string Collator::sortKey(std::string_view text) const
     return key;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

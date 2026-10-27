@@ -18,7 +18,7 @@
 #include "ui/theme.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 ProgressBar::ProgressBar() = default;
 
@@ -146,4 +146,4 @@ void BusyIndicator::paint(Painter& painter)
     canvas->restore();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

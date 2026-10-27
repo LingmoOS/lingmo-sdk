@@ -6,9 +6,9 @@
 
 #include "ui/color_mixer.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The toolkit's recipes, which every provider starts from.
 void addToolkitColors(ColorMixer& mixer, const Theme& theme);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

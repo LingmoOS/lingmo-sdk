@@ -14,7 +14,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // One of the toolkit's single-colour glyphs, such as "check", "chevron-down" or
 // "search", in a colour; the theme's text colour unless set. Drawn square,
@@ -97,4 +97,4 @@ void preloadThemeIcons(std::vector<std::string> names, int size, double scale, s
 // from the cache when it is there; null when the theme has none.
 Bitmap themeIconBitmap(const std::string& name, int size, double scale);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -43,7 +43,7 @@ namespace base = Lingmo::Base;
 #include "ui/icon_loader.h"
 #include "ui/image_formats.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The allocation limit, 256 MiB.
 static constexpr int64_t kAllocationLimit = int64_t(256) * 1024 * 1024;
@@ -513,4 +513,4 @@ DecodedImage decodeImage(const ImageRequest& request)
     return result;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

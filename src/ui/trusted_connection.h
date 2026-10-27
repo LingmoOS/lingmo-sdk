@@ -11,7 +11,7 @@
 
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 namespace gpu {
 class EglContext;
@@ -60,4 +60,4 @@ private:
     std::unique_ptr<gpu::EglContext> m_gpu;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

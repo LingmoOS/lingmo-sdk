@@ -4,14 +4,14 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include "include/core/SkPath.h"
 #include "base/transform.h"
 #include "ui/path.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct PathAccess
 {
@@ -26,4 +26,4 @@ private:
     static SkPath convert(const Path& path, Map map);
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

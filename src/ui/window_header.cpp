@@ -11,7 +11,7 @@
 #include "ui/header_button.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double kButton = 32;
 static constexpr double kButtonSpacing = 1;
@@ -140,4 +140,4 @@ void WindowHeader::pointerPress(const PointerEvent& event)
     window->startMove();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

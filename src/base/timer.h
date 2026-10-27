@@ -7,7 +7,7 @@
 #include <chrono>
 #include <functional>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 class EventLoop;
 
@@ -46,4 +46,4 @@ private:
     int m_id = 0;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

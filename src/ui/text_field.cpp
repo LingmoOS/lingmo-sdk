@@ -31,7 +31,7 @@
 
 namespace textlayout = skia::textlayout;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double kMinimumWidth = 200;
 // A medium icon and half the small spacing.
@@ -1088,4 +1088,4 @@ void TextField::startBlinking()
     });
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

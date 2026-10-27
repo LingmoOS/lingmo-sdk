@@ -16,7 +16,7 @@
 #include "ui/view.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The bubble behind the content, as a menu's, and Escape.
 class DropDownPopup::Surface : public View
@@ -157,4 +157,4 @@ void DropDownPopup::close()
         onClosed();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

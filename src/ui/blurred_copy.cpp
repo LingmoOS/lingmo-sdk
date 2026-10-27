@@ -15,7 +15,7 @@
 #include "ui/painter.h"
 #include "ui/text_context.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct BlurredCopy::Cache
 {
@@ -128,4 +128,4 @@ void BlurredCopy::paint(Painter& painter)
                                 SkScalar(std::round((origin.y - m_blurMax) * scale)), SkSamplingOptions(), &paint);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

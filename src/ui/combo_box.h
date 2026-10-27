@@ -11,7 +11,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Icon;
 class Label;
@@ -104,4 +104,4 @@ private:
     bool m_pressed = false;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

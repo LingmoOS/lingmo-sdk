@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -26,7 +26,7 @@ namespace base = Lingmo::Base;
 #include "ui/window.h"
 #include "ui/window_header.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double kWidth = 300;
 static constexpr double kHeaderHeight = 40;
@@ -232,4 +232,4 @@ void AboutDialog::close()
         onClosed();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

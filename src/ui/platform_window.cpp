@@ -16,7 +16,7 @@
 #include "wayland/connection.h"
 #include "wayland/wayland_window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Tests pretend a compositor that draws glass.
 static bool headlessGlassAvailable = false;
@@ -308,4 +308,4 @@ uint32_t PlatformWindow::notifyDrop()
     return m_window->handleDrop();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

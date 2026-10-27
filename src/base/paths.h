@@ -9,7 +9,7 @@
 
 // The user's and the system's standard directories. They are the XDG base
 // directory defaults; the XDG_* variables are not read.
-namespace Lingmo::Base::paths {
+namespace Lingmo::base::paths {
 
 std::string home();
 // ~/.config
@@ -51,4 +51,4 @@ std::string userDirectory(UserDirectory directory, const std::string& userDirsFi
 // directories, or itself when it has a slash; empty when not executable.
 std::string findExecutable(const std::string& program);
 
-} // namespace Lingmo::Base::paths
+} // namespace Lingmo::base::paths

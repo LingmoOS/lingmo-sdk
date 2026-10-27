@@ -14,7 +14,7 @@
 #include "ui/painter.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct MaskedLayerItem;
 
@@ -129,4 +129,4 @@ private:
     std::unique_ptr<Composed> m_composed;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

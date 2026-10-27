@@ -28,11 +28,11 @@ struct zxdg_imported_v2;
 struct lingmo_shell_surface_v1;
 struct lingmo_status_item_v1;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 class DropOffer;
 }
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 class Connection;
 struct ShellSurfaceListeners;
@@ -224,4 +224,4 @@ private:
     bool m_committedOpaque = false;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

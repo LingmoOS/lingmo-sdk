@@ -16,7 +16,7 @@
 #include "ui/theme.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The artwork is drawn on a 24-pixel grid; any other size would be soft.
 static constexpr double kArtwork = 24;
@@ -145,4 +145,4 @@ void HeaderButton::pointerRelease(const PointerEvent& event)
         onClicked();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

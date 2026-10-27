@@ -19,7 +19,7 @@
 
 class SkCanvas;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 
@@ -177,4 +177,4 @@ protected:
     Window* m_window;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

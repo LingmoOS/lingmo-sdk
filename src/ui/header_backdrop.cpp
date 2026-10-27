@@ -28,7 +28,7 @@
 #include "ui/theme.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Content below the bar feeds the blur, so its edge does not fade out.
 static constexpr double kBlurPadding = 32;
@@ -364,4 +364,4 @@ void HeaderBackdrop::paint(Painter& painter)
     painter.restore();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

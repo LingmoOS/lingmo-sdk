@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -28,7 +28,7 @@ namespace base = Lingmo::Base;
 #include "ui/thumbnail_cache.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct ImageView::Picture
 {
@@ -537,4 +537,4 @@ void ImageView::paintMaskedLayer(Painter& painter)
     drawMaskedLayer(painter.canvas(), *textures, painter.offset().x, painter.offset().y, float(painter.opacity()));
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

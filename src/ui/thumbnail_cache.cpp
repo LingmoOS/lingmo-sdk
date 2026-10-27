@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -31,7 +31,7 @@ namespace base = Lingmo::Base;
 #include "base/paths.h"
 #include "ui/image_decoder.h"
 
-namespace Lingmo::UI::thumbnails {
+namespace Lingmo::ui::thumbnails {
 
 namespace {
 
@@ -455,4 +455,4 @@ sk_sp<SkImage> request(const std::string& path, int width, int height)
     return image;
 }
 
-} // namespace Lingmo::UI::thumbnails
+} // namespace Lingmo::ui::thumbnails

@@ -8,7 +8,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Break attributes, one per UTF-16 position, the end included: whether the
 // tailored UAX #14 pair table allows a break before the position, and
@@ -28,4 +28,4 @@ BreakAttributes breakAttributes(std::u16string_view text);
 // before it.
 std::vector<uint8_t> lineBreaks(std::u16string_view text);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

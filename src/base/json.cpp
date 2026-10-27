@@ -10,7 +10,7 @@
 #include <cstdio>
 #include <limits>
 
-namespace Lingmo::Base::json {
+namespace Lingmo::base::json {
 
 // Deeper nesting fails to parse.
 static constexpr int kMaximumDepth = 1024;
@@ -546,4 +546,4 @@ std::string Value::serialize(bool compact) const
     return out;
 }
 
-} // namespace Lingmo::Base::json
+} // namespace Lingmo::base::json

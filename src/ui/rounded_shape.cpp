@@ -16,7 +16,7 @@
 #include "include/core/SkRegion.h"
 #include "include/effects/SkRuntimeEffect.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 namespace {
 
@@ -406,4 +406,4 @@ void drawRoundedShape(SkCanvas* canvas, const RoundedShapeSpec& spec)
     fillRect(quad.right() - border, innerTop, quad.right(), innerBottom, spec.border);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

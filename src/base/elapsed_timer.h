@@ -7,7 +7,7 @@
 #include <chrono>
 #include <cstdint>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // Time since start() on the monotonic clock. Invalid until started.
 class ElapsedTimer
@@ -39,4 +39,4 @@ private:
     Clock::time_point m_start;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

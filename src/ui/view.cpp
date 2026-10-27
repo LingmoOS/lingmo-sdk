@@ -13,7 +13,7 @@
 #include "ui/painter.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Measurement stamps and the epoch come from one counter, so a view's
 // generation changes both when it is stamped and when the epoch moves.
@@ -459,4 +459,4 @@ bool View::contains(const View* view) const
     return false;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -35,7 +35,7 @@
 #include "ui/text_lines.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Characters a font set remembers the fallback of before it starts over.
 static constexpr size_t kMaximumFallbacks = 65536;
@@ -953,4 +953,4 @@ FontSpec systemFixedFont()
             false, false};
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

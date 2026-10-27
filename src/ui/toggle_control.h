@@ -10,7 +10,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Label;
 
@@ -78,4 +78,4 @@ private:
     bool m_hovered = false;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

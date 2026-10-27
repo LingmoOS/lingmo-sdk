@@ -9,7 +9,7 @@
 #include "include/core/SkStream.h"
 #include "include/encode/SkPngEncoder.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 Image::Image(int width, int height)
     : m_width(width)
@@ -30,4 +30,4 @@ bool Image::savePng(const std::string& path) const
     return stream.isValid() && SkPngEncoder::Encode(&stream, pixmap, {});
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

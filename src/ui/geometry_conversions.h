@@ -4,15 +4,15 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include "base/geometry.h"
 #include "ui/geometry.h"
 
 // Between the views' plain structs and the base classes. Kept out of
 // ui/geometry.h: files using both namespaces would see two PointF.
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 inline base::PointF toBase(const PointF& point)
 {
@@ -64,4 +64,4 @@ inline Margins fromBase(const base::InsetsF& insets)
     return {insets.left(), insets.top(), insets.right(), insets.bottom()};
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

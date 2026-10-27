@@ -10,7 +10,7 @@
 #include <unordered_map>
 #include <utility>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // Owns up to a total cost of values; inserting past it drops the least
 // recently used ones. Each value costs 1 unless given otherwise.
@@ -91,4 +91,4 @@ private:
     std::unordered_map<Key, Entry, Hash> m_entries;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

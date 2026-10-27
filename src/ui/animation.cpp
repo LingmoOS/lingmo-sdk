@@ -8,7 +8,7 @@
 #include <cmath>
 
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 Animation::Animation(Window* window)
     : FrameClient(window)
@@ -96,4 +96,4 @@ double Animation::ease(double t) const
     return t;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

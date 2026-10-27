@@ -4,19 +4,19 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <cstdint>
 #include <vector>
 
 #include "ui/geometry.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class AffineTransform;
 }
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 enum class LineCap {
     Butt,
@@ -165,4 +165,4 @@ struct LinearGradient
     }
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

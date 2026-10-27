@@ -17,9 +17,9 @@
 #include "base/thread_pool.h"
 #include "base/timer.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
-namespace dbus = Lingmo::Base::DBus;
+namespace dbus = Lingmo::base::dbus;
 
 class EventLoop;
 
@@ -91,4 +91,4 @@ private:
     bool m_scanQueued = false;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

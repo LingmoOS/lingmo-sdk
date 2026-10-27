@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <functional>
 #include <memory>
@@ -18,7 +18,7 @@ namespace base = Lingmo::Base;
 
 class SkCanvas;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Painter;
 class TextLayout;
@@ -211,4 +211,4 @@ private:
     std::vector<State> m_saved;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

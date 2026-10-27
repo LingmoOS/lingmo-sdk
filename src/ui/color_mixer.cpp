@@ -8,7 +8,7 @@
 
 #include "ui/color_provider.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 ColorRecipe::ColorRecipe(Color color)
     : m_make([color](const ColorProvider&) { return color; })
@@ -69,4 +69,4 @@ ColorRecipe& ColorMixer::recipe(uint16_t id)
     return m_recipes.try_emplace(id, Color{}).first->second;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

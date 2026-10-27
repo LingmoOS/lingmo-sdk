@@ -30,14 +30,14 @@
 #include "ui/theme.h"
 #include "ui/window.h"
 #include "base/i18n.h"
-namespace base = Lingmo::Base;
+namespace base = Lingmo::base;
 namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
 
-namespace ui = Lingmo::UI;
+namespace ui = Lingmo::ui;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Wide enough that nothing wraps while measuring.
 static constexpr double kUnboundedWidth = 1e6;
@@ -940,4 +940,4 @@ textlayout::Paragraph* Label::layoutParagraph(double width) const
     return m_elided.get();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

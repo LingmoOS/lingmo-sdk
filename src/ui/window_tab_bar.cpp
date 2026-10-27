@@ -19,7 +19,7 @@
 #include "ui/theme.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The tab bar's timings and sizes.
 static constexpr int kSlideMs = 150;
@@ -1048,4 +1048,4 @@ void WindowTabBar::paint(Painter&)
 {
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -8,7 +8,7 @@
 
 #include "ui/label.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A Label with a raised or sunken style: the text drawn first in the style
 // colour one logical pixel down (Raised) or up (Sunken), then
@@ -39,4 +39,4 @@ private:
     Color m_styleColor;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -10,8 +10,8 @@
 #include "base/dbus.h"
 #include "base/locale.h"
 
-namespace Lingmo::Base {
-namespace dbus = Lingmo::Base::DBus;
+namespace Lingmo::base {
+namespace dbus = Lingmo::base::dbus;
 
 static constexpr const char* kService = "org.lingmo.Services";
 static constexpr const char* kPath = "/org/lingmo/Services/Language";
@@ -70,4 +70,4 @@ bool SessionLanguage::apply(const std::map<std::string, std::string>& variables)
     return true;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

@@ -15,7 +15,7 @@
 #include "modules/skunicode/include/SkUnicode.h"
 #include "src/core/SkUTF.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 namespace {
 
@@ -513,4 +513,4 @@ sk_sp<SkUnicode> makeLineBreakUnicode(sk_sp<SkUnicode> icu)
     return sk_make_sp<LineBreakUnicode>(std::move(icu));
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -10,7 +10,7 @@
 #include <string>
 #include <string_view>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 class Uuid
 {
@@ -37,4 +37,4 @@ private:
     std::array<uint8_t, 16> m_bytes{};
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

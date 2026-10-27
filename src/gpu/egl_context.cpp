@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -27,7 +27,7 @@ namespace base = Lingmo::Base;
 #include "base/event_loop.h"
 #include "gpu/program_cache.h"
 
-namespace Lingmo::UI::gpu {
+namespace Lingmo::ui::gpu {
 
 // How long after the last frame a window counts as idle.
 static constexpr auto kIdleDelay = std::chrono::seconds(5);
@@ -257,4 +257,4 @@ bool EglContext::swapBuffers(EGLSurface surface, const std::vector<Rect>& damage
     return m_swapBuffersWithDamage(m_display, surface, rects.data(), EGLint(damage.size()));
 }
 
-} // namespace Lingmo::UI::gpu
+} // namespace Lingmo::ui::gpu

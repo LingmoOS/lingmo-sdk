@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -16,7 +16,7 @@ namespace base = Lingmo::Base;
 #include "ui/bitmap_private.h"
 #include "ui/path_private.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct BitmapPainter::Canvas
 {
@@ -208,4 +208,4 @@ void BitmapPainter::drawBitmap(const base::RectF& target, const Bitmap& bitmap, 
     canvas->restore();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

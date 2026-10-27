@@ -10,7 +10,7 @@
 #include <string>
 #include <string_view>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 class EventLoop;
 
@@ -107,4 +107,4 @@ private:
     std::shared_ptr<bool> m_alive = std::make_shared<bool>(true);
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

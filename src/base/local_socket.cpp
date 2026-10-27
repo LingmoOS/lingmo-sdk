@@ -16,7 +16,7 @@
 
 #include "base/event_loop.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 LocalSocket::LocalSocket(EventLoop* loop)
     : m_loop(loop ? *loop : *EventLoop::current())
@@ -268,4 +268,4 @@ void LocalServer::acceptPending()
     }
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

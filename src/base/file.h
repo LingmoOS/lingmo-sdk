@@ -9,7 +9,7 @@
 #include <string_view>
 #include <sys/types.h>
 
-namespace Lingmo::Base::file {
+namespace Lingmo::base::file {
 
 // The whole file; empty when it cannot be read.
 std::optional<std::string> read(const std::string& path);
@@ -68,4 +68,4 @@ private:
     int m_fd = -1;
 };
 
-} // namespace Lingmo::Base::file
+} // namespace Lingmo::base::file

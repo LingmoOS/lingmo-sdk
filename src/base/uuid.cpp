@@ -9,7 +9,7 @@
 #include <cstdlib>
 #include <sys/random.h>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 Uuid Uuid::generate()
 {
@@ -82,4 +82,4 @@ std::string Uuid::toString() const
     return text;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

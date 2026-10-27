@@ -15,8 +15,8 @@
 #include "base/file.h"
 #include "base/paths.h"
 
-namespace Lingmo::Base {
-namespace dbus = Lingmo::Base::DBus;
+namespace Lingmo::base {
+namespace dbus = Lingmo::base::dbus;
 
 namespace fs = std::filesystem;
 
@@ -396,4 +396,4 @@ std::shared_ptr<const DesktopEntry> ApplicationRegistry::resolveWindow(const std
     return best;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

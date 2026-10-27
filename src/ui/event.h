@@ -10,7 +10,7 @@
 
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 enum Modifier : uint32_t {
     NoModifier = 0,
@@ -183,4 +183,4 @@ enum class CursorShape {
     Blank,
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

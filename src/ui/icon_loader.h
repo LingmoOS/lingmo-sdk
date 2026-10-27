@@ -17,7 +17,7 @@
 
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Icons rasterised at the exact device size they are drawn at, so they land on
 // whole pixels at every scale, and kept for reuse.
@@ -120,4 +120,4 @@ private:
     std::unordered_map<std::string, std::list<std::pair<std::string, sk_sp<SkImage>>>::iterator> m_index;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

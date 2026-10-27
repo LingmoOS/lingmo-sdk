@@ -6,7 +6,7 @@
 
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 FrameClient::FrameClient(Window* window)
     : m_window(window)
@@ -35,4 +35,4 @@ void FrameClient::stopTicking()
     m_ticking = false;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

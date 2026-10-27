@@ -8,7 +8,7 @@
 #include <cstddef>
 #include <memory>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Skia's GPU backend on a GLES context the host owns and keeps current, for
 // EmbeddedWindow::render() into the host's textures: no context of the
@@ -91,4 +91,4 @@ private:
     std::unique_ptr<Private> d;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

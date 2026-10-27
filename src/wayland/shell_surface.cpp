@@ -22,7 +22,7 @@
 
 #include "wayland/connection.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 struct ShellSurfaceListeners
 {
@@ -732,4 +732,4 @@ void ShellSurface::prepareCommit(int width, int height, bool opaque)
     }
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

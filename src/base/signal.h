@@ -13,7 +13,7 @@
 #pragma push_macro("emit")
 #undef emit
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // Keeps a callback connected to a Signal; destroying, reassigning or
 // resetting it disconnects the callback.
@@ -90,6 +90,6 @@ private:
         std::make_shared<std::vector<std::shared_ptr<Slot>>>();
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base
 
 #pragma pop_macro("emit")

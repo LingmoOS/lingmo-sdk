@@ -11,7 +11,7 @@
 #include "ui/frame_client.h"
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Touchpad and wheel scrolling of one view. It follows lingmo-framework's
 // Scroller, so every view in the session scrolls alike: finger
@@ -136,4 +136,4 @@ private:
     bool m_frameRequested = false;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

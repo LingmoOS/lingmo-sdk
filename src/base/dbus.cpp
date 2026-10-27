@@ -21,7 +21,7 @@
 
 #include "base/event_loop.h"
 
-namespace Lingmo::Base::DBus {
+namespace Lingmo::base::dbus {
 
 static const Variant::Items s_noItems;
 static const std::string s_noBytes;
@@ -1133,4 +1133,4 @@ int ObjectAccess::setProperty(sd_bus*, const char*, const char*, const char* pro
     return 1;
 }
 
-} // namespace Lingmo::Base::DBus
+} // namespace Lingmo::base::dbus

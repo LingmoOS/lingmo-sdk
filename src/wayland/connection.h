@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <cstdint>
 #include <functional>
@@ -53,11 +53,11 @@ struct zwp_primary_selection_device_manager_v1;
 struct zxdg_output_manager_v1;
 struct zxdg_output_v1;
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class EventLoop;
 }
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 class DataDevice;
 class PrimarySelection;
@@ -264,4 +264,4 @@ private:
     int m_hook = 0;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

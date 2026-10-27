@@ -9,7 +9,7 @@
 #include <ostream>
 #include <vector>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 AffineTransform AffineTransform::fromRotation(double degrees)
 {
@@ -425,4 +425,4 @@ std::ostream& operator<<(std::ostream& stream, const AffineTransform& transform)
     return stream << transform.toString();
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

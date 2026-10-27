@@ -18,7 +18,7 @@
 #include "ui/view.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Frames whose damage is kept for buffer age; older buffers repaint whole.
 static constexpr size_t kDamageHistory = 4;
@@ -508,4 +508,4 @@ std::vector<Rect> Window::paintFrame(SkCanvas* canvas, int bufferAge)
     return rects;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

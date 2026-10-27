@@ -8,7 +8,7 @@
 
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The glass of menus and drop-downs, frosted enough that text reads over any
 // backdrop; the lens is kept to the lip and the edge is the compositor's
@@ -31,4 +31,4 @@ private:
     std::optional<bool> m_darkMode;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

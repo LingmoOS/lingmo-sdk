@@ -10,7 +10,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // A day of the proleptic Gregorian calendar.
 struct CalendarDate
@@ -170,4 +170,4 @@ private:
     bool m_groupDigits = true;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

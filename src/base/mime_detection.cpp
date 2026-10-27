@@ -19,7 +19,7 @@
 #include "base/mime_database.h"
 #include "base/paths.h"
 
-namespace Lingmo::Base::mime {
+namespace Lingmo::base::mime {
 
 // How much of a file the magic rules see.
 static constexpr size_t kSniffBytes = 16384;
@@ -475,4 +475,4 @@ std::string genericIconName(std::string_view type)
     return name.substr(0, name.find('/')) + "-x-generic";
 }
 
-} // namespace Lingmo::Base::mime
+} // namespace Lingmo::base::mime

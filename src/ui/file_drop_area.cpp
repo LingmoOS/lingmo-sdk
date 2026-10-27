@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -12,7 +12,7 @@ namespace base = Lingmo::Base;
 #include "base/url.h"
 #include "ui/drag.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr const char* kUriList = "text/uri-list";
 
@@ -113,4 +113,4 @@ uint32_t FileDropArea::drop(const DragEvent& event)
     return taken;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

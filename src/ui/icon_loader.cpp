@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -43,7 +43,7 @@ namespace base = Lingmo::Base;
 #include "ui/embedded_files.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Enough for every icon a few windows show at two scales.
 static constexpr size_t kCacheLimit = 512;
@@ -1014,4 +1014,4 @@ sk_sp<SkImage> IconLoader::themeIcon(const std::string& name, int size, double s
     return image;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

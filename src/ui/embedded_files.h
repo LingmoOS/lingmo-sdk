@@ -6,7 +6,7 @@
 
 #include <cstddef>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Files built into the library, such as the glyph icons under data/icons.
 struct EmbeddedFile
@@ -18,4 +18,4 @@ struct EmbeddedFile
 
 const EmbeddedFile* findEmbeddedFile(const char* name);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

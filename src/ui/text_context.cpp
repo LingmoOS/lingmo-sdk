@@ -29,7 +29,7 @@
 #include "ui/line_break_unicode.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Character fallbacks remembered before the cache starts over.
 static constexpr size_t kMaximumFallbacks = 65536;
@@ -716,4 +716,4 @@ void TextContext::readFontconfigDefaults()
     m_subpixelPositioning = true;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

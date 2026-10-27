@@ -12,7 +12,7 @@
 
 struct UCollator;
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // Locale-aware string order through ICU, with options: numeric mode compares
 // digit runs by value, so "Episode 2" sorts before "Episode 10";
@@ -56,4 +56,4 @@ private:
     mutable std::shared_ptr<UCollator> m_collator;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

@@ -6,8 +6,8 @@
 
 #include "base/strings.h"
 
-namespace Lingmo::Base::url {
-namespace strings = Lingmo::Base::strings;
+namespace Lingmo::base::url {
+namespace strings = Lingmo::base::strings;
 
 static int hexValue(char c)
 {
@@ -105,4 +105,4 @@ std::vector<std::string> parseUriList(std::string_view text)
     return urls;
 }
 
-} // namespace Lingmo::Base::url
+} // namespace Lingmo::base::url

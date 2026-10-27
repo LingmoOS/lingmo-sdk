@@ -11,7 +11,7 @@
 
 #include "include/core/SkImageInfo.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 Texture readTexture(const SkPixmap& pixmap)
 {
@@ -223,4 +223,4 @@ SkBitmap composite(const Texture& source, const std::vector<Texture>& blurs, con
     return bitmap;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

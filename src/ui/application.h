@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <map>
 #include <memory>
@@ -17,18 +17,18 @@ namespace base = Lingmo::Base;
 #include "base/signal.h"
 #include "ui/geometry.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class EventLoop;
 class SessionLanguage;
 }
 
-namespace Lingmo::Base::DBus {
+namespace Lingmo::base::dbus {
 class Connection;
 }
 
-namespace dbus = Lingmo::Base::DBus;
+namespace dbus = Lingmo::base::dbus;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class AppearanceWatcher;
 class TextContext;
@@ -162,4 +162,4 @@ private:
     bool m_activeUpdatePending = false;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

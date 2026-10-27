@@ -6,7 +6,7 @@
 
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr Color kWhite = Color::rgb(0xFFFFFF);
 static constexpr Color kBlack = Color::rgb(0x000000);
@@ -116,4 +116,4 @@ void addToolkitColors(ColorMixer& mixer, const Theme& theme)
     mixer[ColorId::AboutDialogBackground] = withAlpha(ColorId::Background, 0.8);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

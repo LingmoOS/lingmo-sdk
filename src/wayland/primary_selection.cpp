@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -13,7 +13,7 @@ namespace base = Lingmo::Base;
 
 #include "wayland/connection.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 struct PrimarySelectionListeners
 {
@@ -94,4 +94,4 @@ void PrimarySelection::destroyOffer(void* offer)
     zwp_primary_selection_offer_v1_destroy(static_cast<zwp_primary_selection_offer_v1*>(offer));
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

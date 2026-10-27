@@ -13,7 +13,7 @@
 #include "ui/bitmap.h"
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 
@@ -90,4 +90,4 @@ struct DragEvent
     uint32_t modifiers = 0;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

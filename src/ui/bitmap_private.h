@@ -8,10 +8,10 @@
 #include "include/core/SkPixmap.h"
 #include "ui/bitmap.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 SkColorType skColorType(Bitmap::Format format);
 // Read-only view of the pixels.
 SkPixmap skPixmap(const Bitmap& bitmap);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -10,7 +10,7 @@
 #include "ui/platform_window.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The height the item has until the bar says.
 static constexpr double kDefaultHeight = 24;
@@ -139,4 +139,4 @@ PopupPlacement StatusItem::popupPlacement(double gap) const
     return placement;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

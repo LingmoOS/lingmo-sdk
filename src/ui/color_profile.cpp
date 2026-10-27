@@ -6,7 +6,7 @@
 
 #include <webp/demux.h>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 std::unique_ptr<SourceProfile> SourceProfile::fromIcc(const void* data, size_t size)
 {
@@ -85,4 +85,4 @@ void SourceProfile::toSrgb(uint8_t* pixels, int width, int height, size_t stride
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

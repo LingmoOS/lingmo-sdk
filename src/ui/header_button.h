@@ -10,7 +10,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A title bar button: window button artwork on a round plate that
 // shows on hover, dimmed while the window is inactive.
@@ -70,4 +70,4 @@ private:
     PlateAlphas m_dark = {0.12, 0.06};
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

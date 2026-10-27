@@ -9,7 +9,7 @@
 
 #include "ui/toggle_control.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Animation;
 
@@ -35,4 +35,4 @@ private:
     std::unique_ptr<Animation> m_colorAnimation;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

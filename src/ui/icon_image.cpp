@@ -13,7 +13,7 @@
 #include "ui/icon_loader.h"
 #include "ui/painter.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 IconImage::IconImage(std::string name, int pixels)
     : m_name(std::move(name))
@@ -70,4 +70,4 @@ void IconImage::paint(Painter& painter)
     painter.canvas()->drawImageRect(image, target, SkSamplingOptions(SkFilterMode::kLinear), &paint);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -8,7 +8,7 @@
 
 // The xkb keysyms KeyEvent::key carries, for the keys controls handle.
 // Letters and digits are their ASCII codes, lower case for letters.
-namespace Lingmo::UI::key {
+namespace Lingmo::ui::key {
 
 inline constexpr uint32_t Space = 0x0020;
 inline constexpr uint32_t BackSpace = 0xff08;
@@ -35,4 +35,4 @@ constexpr uint32_t letter(char c)
     return uint32_t(c >= 'A' && c <= 'Z' ? c - 'A' + 'a' : c);
 }
 
-} // namespace Lingmo::UI::key
+} // namespace Lingmo::ui::key

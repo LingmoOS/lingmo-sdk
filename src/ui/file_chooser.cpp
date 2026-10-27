@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -20,8 +20,8 @@ namespace base = Lingmo::Base;
 #include "ui/translation.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
-namespace dbus = Lingmo::Base::DBus;
+namespace Lingmo::ui {
+namespace dbus = Lingmo::base::dbus;
 
 static const char* const kPortalService = "org.freedesktop.portal.Desktop";
 static const char* const kPortalPath = "/org/freedesktop/portal/desktop";
@@ -345,4 +345,4 @@ void FileChooser::call(Request* current, const std::string& parentWindow)
     });
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

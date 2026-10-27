@@ -13,7 +13,7 @@
 #include "base/event_loop.h"
 #include "ui/application.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double friction = 4.5;
 static constexpr double springFrequency = 18.0;
@@ -711,4 +711,4 @@ void Scroller::advanceAxis(double& position, double& velocity, const Axis& axis,
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

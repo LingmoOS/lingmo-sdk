@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <cstddef>
 #include <cstdint>
@@ -16,7 +16,7 @@ namespace base = Lingmo::Base;
 
 #include "base/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Pixels in memory for offscreen work: decoding, scaling, painting and
 // encoding, with raw access for uploads.
@@ -119,4 +119,4 @@ private:
 // the common image scaling has it.
 base::Size scaledSize(base::Size size, base::Size box, Bitmap::Scaling scaling);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

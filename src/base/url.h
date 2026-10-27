@@ -9,7 +9,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::Base::url {
+namespace Lingmo::base::url {
 
 // "%41" and the like decoded; a malformed escape stays as it is.
 std::string percentDecoded(std::string_view text);
@@ -28,4 +28,4 @@ std::string fromLocalFile(std::string_view path);
 // empty lines and "#" comments left out.
 std::vector<std::string> parseUriList(std::string_view text);
 
-} // namespace Lingmo::Base::url
+} // namespace Lingmo::base::url

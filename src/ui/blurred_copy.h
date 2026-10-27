@@ -9,7 +9,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A blurred copy of a view, such as a text or icon shadow: the content view is
 // drawn into a texture the size of this view (whole logical pixels, then the
@@ -54,4 +54,4 @@ private:
     std::unique_ptr<Cache> m_cache;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -28,7 +28,7 @@
 #include "ui/rounded_shape.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static SkRect toSkRect(const Rect& rect)
 {
@@ -437,4 +437,4 @@ void Painter::drawLine(PointF from, PointF to, Color color, double widthPx)
                        SkScalar((m_offset.y + to.y) * m_scale), paint);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -37,8 +37,8 @@
 U_CAPI UResourceBundle* U_EXPORT2 ures_getByKeyWithFallback(const UResourceBundle* resourceBundle, const char* key,
                                                             UResourceBundle* fillIn, UErrorCode* status);
 
-namespace Lingmo::Base {
-namespace strings = Lingmo::Base::strings;
+namespace Lingmo::base {
+namespace strings = Lingmo::base::strings;
 
 struct Locale::Data
 {
@@ -1224,4 +1224,4 @@ std::string Locale::territoryName(std::string_view code)
     return U_FAILURE(status) ? std::string() : toUtf8(buffer, length);
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

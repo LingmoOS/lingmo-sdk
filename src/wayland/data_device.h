@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <cstdint>
 #include <memory>
@@ -24,7 +24,7 @@ struct wl_surface;
 struct xdg_toplevel_drag_v1;
 struct wp_viewport;
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 struct DataDeviceListeners;
 class ShellSurface;
@@ -93,4 +93,4 @@ private:
     size_t m_iconSize = 0;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

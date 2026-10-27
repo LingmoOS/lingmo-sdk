@@ -21,7 +21,7 @@ class SkCanvas;
 struct SkIRect;
 class SkRegion;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class DropOffer;
 struct DragSource;
@@ -590,4 +590,4 @@ private:
     int m_nextShortcutId = 1;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

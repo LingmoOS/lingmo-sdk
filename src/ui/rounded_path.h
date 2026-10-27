@@ -7,7 +7,7 @@
 #include "include/core/SkPath.h"
 #include "include/core/SkRect.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A rounded rect whose corners are circular arcs, or the continuous corners
 // the compositor gives window silhouettes: a cubic superellipse meeting the
@@ -16,4 +16,4 @@ namespace Lingmo::UI {
 // rounded_shape.h.
 SkPath roundedRectPath(const SkRect& rect, double radius, bool continuous);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

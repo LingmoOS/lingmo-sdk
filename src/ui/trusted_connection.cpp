@@ -10,7 +10,7 @@
 #include "ui/application.h"
 #include "wayland/connection.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 std::unique_ptr<TrustedConnection> TrustedConnection::fromFd(int fd)
 {
@@ -54,4 +54,4 @@ bool TrustedConnection::hasShell() const
     return m_connection->shell() != nullptr;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

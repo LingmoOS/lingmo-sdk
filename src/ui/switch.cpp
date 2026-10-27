@@ -11,7 +11,7 @@
 #include "ui/animation.h"
 #include "ui/painter.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr SizeF kIndicator = {38, 20};
 static constexpr double kHandle = 16;
@@ -75,4 +75,4 @@ void Switch::paintIndicator(Painter& painter, const RectF& rect)
     painter.restore();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

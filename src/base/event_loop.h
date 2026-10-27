@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 class EventLoop;
 
@@ -142,4 +142,4 @@ private:
     std::vector<Task> m_posted;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

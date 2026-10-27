@@ -17,11 +17,11 @@
 class SkSurface;
 struct wl_egl_window;
 
-namespace Lingmo::UI::gpu {
+namespace Lingmo::ui::gpu {
 class EglContext;
 }
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 class Connection;
 
@@ -156,4 +156,4 @@ private:
     int m_bufferHeight = 0;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

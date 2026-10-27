@@ -13,7 +13,7 @@
 #include "ui/painter.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double kMinimumWidth = 64;
 static constexpr double kMinimumHeight = 32;
@@ -128,4 +128,4 @@ bool Button::keyRelease(const KeyEvent& event)
     return true;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

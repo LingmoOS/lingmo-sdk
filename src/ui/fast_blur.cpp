@@ -16,7 +16,7 @@
 #include "ui/multi_effect_blur.h"
 #include "ui/painter.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // calculateWeights: each level's share by how near it lies to the level of
 // detail the radius asks for.
@@ -199,4 +199,4 @@ void FastBlurredCopy::paint(Painter& painter)
                                 SkScalar(std::round(origin.y * scale)), SkSamplingOptions(), &paint);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

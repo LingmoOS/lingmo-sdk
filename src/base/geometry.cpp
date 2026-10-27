@@ -7,7 +7,7 @@
 #include <format>
 #include <ostream>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 static int clampToInt(int64_t value)
 {
@@ -213,4 +213,4 @@ std::ostream& operator<<(std::ostream& stream, const RectF& rect)
     return stream << rect.toString();
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

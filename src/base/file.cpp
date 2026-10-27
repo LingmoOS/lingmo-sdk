@@ -14,7 +14,7 @@
 #include <system_error>
 #include <unistd.h>
 
-namespace Lingmo::Base::file {
+namespace Lingmo::base::file {
 
 std::optional<std::string> read(const std::string& path)
 {
@@ -170,4 +170,4 @@ bool TemporaryFile::write(std::string_view contents)
     return m_fd >= 0;
 }
 
-} // namespace Lingmo::Base::file
+} // namespace Lingmo::base::file

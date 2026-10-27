@@ -14,7 +14,7 @@
 #include "ui/bubble_shape.h"
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class View;
 class Window;
@@ -168,4 +168,4 @@ private:
     std::optional<RectF> m_availableGeometry;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -7,7 +7,7 @@
 #include <functional>
 #include <utility>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // Restores a variable's value when the scope ends.
 template<typename T>
@@ -51,4 +51,4 @@ private:
     std::function<void()> m_function;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

@@ -14,7 +14,7 @@
 #include "ui/path.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class EmbeddedGpu;
 class EmbeddedHost;
@@ -193,4 +193,4 @@ private:
     RectF m_popupGeometry;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

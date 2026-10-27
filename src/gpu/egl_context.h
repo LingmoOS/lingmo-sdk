@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
@@ -21,11 +21,11 @@ class GrDirectContext;
 struct wl_display;
 struct wl_egl_window;
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class EventLoop;
 }
 
-namespace Lingmo::UI::gpu {
+namespace Lingmo::ui::gpu {
 
 class ProgramCache;
 
@@ -108,4 +108,4 @@ private:
     bool m_idleArmed = false;
 };
 
-} // namespace Lingmo::UI::gpu
+} // namespace Lingmo::ui::gpu

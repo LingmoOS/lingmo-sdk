@@ -7,7 +7,7 @@
 #include <concepts>
 #include <memory>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 namespace internal {
 
@@ -93,4 +93,4 @@ private:
     std::shared_ptr<internal::WeakFlag> m_flag;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

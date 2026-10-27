@@ -12,7 +12,7 @@
 #include "include/core/SkPathBuilder.h"
 #include "include/core/SkRRect.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static double continuousCornerExtent(double radius, double halfSize)
 {
@@ -87,4 +87,4 @@ SkPath roundedRectPath(const SkRect& rect, double radius, bool continuous)
     return path.detach().makeOffset(rect.left(), rect.top());
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

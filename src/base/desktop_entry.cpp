@@ -13,7 +13,7 @@
 #include "base/paths.h"
 #include "base/settings.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 static std::string trimmed(std::string_view text)
 {
@@ -371,4 +371,4 @@ std::optional<DesktopEntry> DesktopEntry::parse(const std::string& id, const std
     return data;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

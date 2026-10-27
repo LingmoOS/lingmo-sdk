@@ -6,7 +6,7 @@
 
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 GlassMaterial popupGlass(bool darkMode)
 {
@@ -47,4 +47,4 @@ void PopupGlass::prepare(Window& window)
     window.setTranslucentSubpixelText(!window.backgroundGlassAvailable());
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

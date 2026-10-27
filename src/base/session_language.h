@@ -10,14 +10,14 @@
 
 #include "base/signal.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 namespace DBus {
 class Connection;
 }
 
 // Shorthand for the D-Bus namespace.
-namespace dbus = Lingmo::Base::DBus;
+namespace dbus = Lingmo::base::dbus;
 
 // Follows the session language that lingmo-services keeps: when it
 // changes, the process's language variables and locale are set again and
@@ -43,4 +43,4 @@ private:
     std::unique_ptr<Private> d;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

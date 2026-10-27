@@ -34,14 +34,14 @@
 #include "ui/line_breaks.h"
 #include "ui/text_context.h"
 
-namespace base = Lingmo::Base;
+namespace base = Lingmo::base;
 namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
 
-namespace ui = Lingmo::UI;
+namespace ui = Lingmo::ui;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 std::vector<TextLineBox> textLineBoxes(textlayout::Paragraph* paragraph, const SkTypeface* typeface,
                                        double pixelSize, double scale, bool hintedLayout)
@@ -1133,4 +1133,4 @@ RectF inkBoundingRect(textlayout::Paragraph* paragraph, double pixelSize, double
     return {left, top, right - left, bottom - top};
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

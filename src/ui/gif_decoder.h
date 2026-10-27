@@ -8,7 +8,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // GIF frames composited onto the logical screen one after another: each
 // frame's disposal applied when the next one starts, "restore to
@@ -66,4 +66,4 @@ private:
     int m_lastHeight = 0;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

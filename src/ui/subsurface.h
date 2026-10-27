@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <functional>
 #include <memory>
@@ -15,7 +15,7 @@ namespace base = Lingmo::Base;
 
 struct wl_display;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 struct SubsurfacePrivate;
@@ -94,4 +94,4 @@ private:
     std::unique_ptr<SubsurfacePrivate> d;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

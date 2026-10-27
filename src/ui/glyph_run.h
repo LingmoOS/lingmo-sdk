@@ -12,7 +12,7 @@
 
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Painter;
 struct GlyphRendererPrivate;
@@ -140,4 +140,4 @@ struct FontFamily
 // it is fixed pitch.
 std::vector<FontFamily> fontFamilies();
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

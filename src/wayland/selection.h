@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <functional>
 #include <optional>
@@ -16,11 +16,11 @@ namespace base = Lingmo::Base;
 
 #include "ui/clipboard.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class EventLoop;
 }
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 class Connection;
 
@@ -88,4 +88,4 @@ private:
     std::vector<std::pair<std::string, std::string>> m_sourceData;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

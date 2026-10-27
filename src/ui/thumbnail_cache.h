@@ -9,7 +9,7 @@
 #include "include/core/SkImage.h"
 #include "include/core/SkRefCnt.h"
 
-namespace Lingmo::UI::thumbnails {
+namespace Lingmo::ui::thumbnails {
 
 // The thumbnail of a file for a box of device pixels, from the freedesktop
 // cache in ~/.cache/thumbnails or made and stored there, as lingmo-framework's
@@ -23,4 +23,4 @@ sk_sp<SkImage> request(const std::string& path, int width, int height);
 // 3986's path characters and brackets.
 std::string fileUri(const std::string& absolutePath);
 
-} // namespace Lingmo::UI::thumbnails
+} // namespace Lingmo::ui::thumbnails

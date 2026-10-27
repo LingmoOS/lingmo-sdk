@@ -13,7 +13,7 @@
 #include "ui/geometry.h"
 #include "ui/glyph_run.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Painter;
 struct TextLayoutPrivate;
@@ -118,4 +118,4 @@ private:
 // font's point size.
 FontSpec systemFixedFont();
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

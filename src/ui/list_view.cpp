@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cmath>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The scrolled content: as tall as all rows, holding only those in sight.
 class ListView::Rows : public View
@@ -153,4 +153,4 @@ void ListView::updateItems(bool rebind)
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

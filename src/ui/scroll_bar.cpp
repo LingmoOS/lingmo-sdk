@@ -14,7 +14,7 @@
 #include "ui/painter.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr double kPadding = 1;
 // Two lines of the default font, so long content keeps a handle to grab.
@@ -214,4 +214,4 @@ void ScrollBar::fadeTo(double opacity)
     m_fade->start();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

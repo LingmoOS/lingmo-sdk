@@ -11,7 +11,7 @@
 #include <utility>
 #include <vector>
 
-namespace Lingmo::Base::json {
+namespace Lingmo::base::json {
 
 // A JSON value, read from and written to RFC 8259 text. Numbers are doubles;
 // objects keep their members in the order read or added.
@@ -88,4 +88,4 @@ private:
     Object m_object;
 };
 
-} // namespace Lingmo::Base::json
+} // namespace Lingmo::base::json

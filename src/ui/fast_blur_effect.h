@@ -8,7 +8,7 @@
 
 #include "ui/bitmap.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The FastBlur effect's weights of the source and its five halved levels for
 // a radius, normalised together.
@@ -21,4 +21,4 @@ std::array<double, 6> fastBlurWeights(double radius);
 // the source's size, Argb32Premultiplied.
 Bitmap fastBlur(const Bitmap& source, double logicalWidth, double logicalHeight, double radius, double scale);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -16,7 +16,7 @@
 
 class GrDirectContext;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class EmbeddedWindow;
 
@@ -115,4 +115,4 @@ private:
     bool m_gpuSurfaceOpaque = false;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

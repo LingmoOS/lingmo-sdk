@@ -11,7 +11,7 @@
 
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class View;
 class Window;
@@ -70,4 +70,4 @@ private:
     Surface* m_surface = nullptr;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -9,7 +9,7 @@
 #include <cmath>
 #include <limits>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 namespace rounding {
 
@@ -515,4 +515,4 @@ void CellLayout::layout()
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

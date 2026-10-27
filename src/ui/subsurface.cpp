@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -29,7 +29,7 @@ namespace base = Lingmo::Base;
 #include "wayland/connection.h"
 #include "wayland/wayland_window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct SubsurfacePrivate final : wayland::SubsurfaceClient
 {
@@ -409,4 +409,4 @@ bool Subsurface::waitForFrame(int timeoutMs)
     return true;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

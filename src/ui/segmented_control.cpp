@@ -16,7 +16,7 @@
 #include "ui/painter.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // 32 high inside a padding of 2, the plate 2 inside its button. A tab bar: a
 // tab button high, a medium icon and a small spacing, without padding.
@@ -282,4 +282,4 @@ void SegmentedControl::pointerRelease(const PointerEvent& event)
         pick(pressed);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

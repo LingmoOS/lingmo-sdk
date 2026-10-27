@@ -10,7 +10,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A horizontal slider: a thin track filled in the accent colour up to
 // a round white handle with a soft shadow. A stepped slider marks its steps
@@ -84,4 +84,4 @@ private:
     std::function<std::string(double)> m_valueToolTip;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -15,7 +15,7 @@
 #include "ui/painter.h"
 #include "ui/theme.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The square, in device pixels, an icon of the size takes in the view: its
 // raster centred on the view, then snapped.
@@ -187,4 +187,4 @@ void ThemeIcon::setImageProviderLookup(bool provider)
     requestPaint();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

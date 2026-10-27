@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <functional>
 #include <memory>
@@ -14,7 +14,7 @@ namespace base = Lingmo::Base;
 #include "base/geometry.h"
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Painter;
 class Window;
@@ -59,4 +59,4 @@ private:
     std::unique_ptr<AnimatedImagePrivate> d;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -10,7 +10,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::UI::image_formats {
+namespace Lingmo::ui::image_formats {
 
 // Premultiplied 0xAARRGGBB words, row by row.
 struct RawImage
@@ -39,4 +39,4 @@ RawImage decodeTga(std::string_view data);
 bool isIcns(std::string_view data);
 std::optional<std::string> largestIcnsPng(std::string_view data);
 
-} // namespace Lingmo::UI::image_formats
+} // namespace Lingmo::ui::image_formats

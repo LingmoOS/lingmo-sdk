@@ -9,7 +9,7 @@
 
 class SkCanvas;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // An image clipped to a rounded rectangle through two layers, as a GPU scene
 // graph renders it: the image drawn into a layer texture of ceil(size) * dpr
@@ -51,4 +51,4 @@ MaskedLayerTextures renderMaskedLayerTextures(const SkImage& picture, const Mask
 // (logical) covers pixel centres, on a canvas in device pixels.
 void drawMaskedLayer(SkCanvas* canvas, const MaskedLayerTextures& textures, double x, double y, float opacity);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

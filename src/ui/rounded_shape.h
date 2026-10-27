@@ -9,7 +9,7 @@
 
 class SkCanvas;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A rounded rectangle in device pixels: the quad it covers, the
 // shape `inset` inside it (outside when negative), a border inside the
@@ -30,4 +30,4 @@ struct RoundedShapeSpec
 
 void drawRoundedShape(SkCanvas* canvas, const RoundedShapeSpec& spec);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

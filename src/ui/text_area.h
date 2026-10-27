@@ -12,7 +12,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A multi-line text area, laid out as Label lays out wrapped text;
 // positions are UTF-8 byte offsets. Taller text than the area
@@ -116,4 +116,4 @@ private:
     std::unique_ptr<Private> d;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

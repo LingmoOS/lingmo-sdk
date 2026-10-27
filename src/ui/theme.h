@@ -9,7 +9,7 @@
 
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The desktop's colours and metrics. Lengths are logical pixels; font sizes are
 // kept in points, as the appearance settings store them.
@@ -68,4 +68,4 @@ inline constexpr Color orange = Color::rgb(0xFEA042);
 inline constexpr Color grey = Color::rgb(0x4F596B);
 } // namespace accent
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

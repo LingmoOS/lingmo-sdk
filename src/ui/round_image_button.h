@@ -10,7 +10,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class ThemeIcon;
 
@@ -93,4 +93,4 @@ private:
     ThemeIcon* m_image;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

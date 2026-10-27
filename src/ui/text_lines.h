@@ -26,7 +26,7 @@ namespace skia::textlayout {
 class Paragraph;
 }
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A line of a paragraph as the text layout places it, in logical pixels from
 // the paragraph's top: the greatest ascent and descent of the fonts its
@@ -150,4 +150,4 @@ RectF tightBoundingRect(skia::textlayout::Paragraph* paragraph, double pixelSize
 // metrics are hinted, unrounded, at the truncated advances.
 RectF inkBoundingRect(skia::textlayout::Paragraph* paragraph, double pixelSize, double scale, bool hintedLayout);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

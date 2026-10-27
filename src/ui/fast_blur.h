@@ -9,7 +9,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A copy of a view blurred as the FastBlur effect does it (radius in logical
 // pixels, transparentBorder off): the content is drawn into a texture the size
@@ -52,4 +52,4 @@ private:
     std::unique_ptr<Cache> m_cache;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

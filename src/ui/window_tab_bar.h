@@ -14,7 +14,7 @@
 #include "ui/color_mixer.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class ColorProvider;
 
@@ -189,4 +189,4 @@ private:
     int m_editing = -1;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

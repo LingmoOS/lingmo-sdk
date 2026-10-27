@@ -13,7 +13,7 @@
 #include "include/core/SkRegion.h"
 #include "include/core/SkSurface.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class View;
 
@@ -48,4 +48,4 @@ struct FrameDamage
     std::vector<Watch> watches;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

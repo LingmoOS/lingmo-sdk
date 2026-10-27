@@ -8,7 +8,7 @@
 
 class SkCanvas;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // An antialiased rectangle with a radius, drawn as vertex geometry: the
 // corners as ceil(r·π/6) chords (3 to 18), the edges ramped across
@@ -18,4 +18,4 @@ namespace Lingmo::UI {
 void drawSmoothRoundedRectangle(SkCanvas* canvas, const RectF& rect, double radius, double scale, Color fill,
                                double borderWidth, Color border, float opacity);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

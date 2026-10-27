@@ -9,7 +9,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class HeaderButton;
 
@@ -59,4 +59,4 @@ private:
     HeaderButton* m_close;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

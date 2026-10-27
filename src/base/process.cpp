@@ -22,7 +22,7 @@
 #include "base/event_loop.h"
 #include "base/file.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 namespace {
 
@@ -541,4 +541,4 @@ pid_t Process::startDetached(const std::string& program, const std::vector<std::
     return pid;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

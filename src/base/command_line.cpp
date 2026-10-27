@@ -10,7 +10,7 @@
 #include <filesystem>
 #include <optional>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 CommandLineOption::CommandLineOption(std::string name, std::string description, std::string valueName,
                                      std::string defaultValue)
@@ -242,4 +242,4 @@ void CommandLineParser::showVersion() const
     std::exit(0);
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

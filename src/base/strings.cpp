@@ -9,7 +9,7 @@
 
 #include <unicode/ustring.h>
 
-namespace Lingmo::Base::strings {
+namespace Lingmo::base::strings {
 
 static constexpr char32_t kReplacement = 0xFFFD;
 // Out of the Unicode range, so that a decoded U+FFFD stays valid.
@@ -499,4 +499,4 @@ std::optional<std::string> fromHex(std::string_view hex)
     return result;
 }
 
-} // namespace Lingmo::Base::strings
+} // namespace Lingmo::base::strings

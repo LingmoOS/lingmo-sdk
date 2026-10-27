@@ -8,7 +8,7 @@
 #include <functional>
 #include <string>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 
@@ -40,4 +40,4 @@ private:
     Stack* m_stack = nullptr;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

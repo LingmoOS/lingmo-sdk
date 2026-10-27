@@ -14,7 +14,7 @@ struct wl_seat;
 struct zwp_text_input_manager_v3;
 struct zwp_text_input_v3;
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 class ShellSurface;
 struct TextInputListeners;
@@ -50,4 +50,4 @@ private:
     TextInputEvent m_pending;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

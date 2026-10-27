@@ -10,7 +10,7 @@
 
 #include "ui/toolkit_colors.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Shows a colour no mixer gave, or one made from itself.
 static constexpr Color kPlaceholder = Color::rgb(0xFF00FF);
@@ -121,4 +121,4 @@ Color ColorProvider::get(uint16_t id) const
     return color;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

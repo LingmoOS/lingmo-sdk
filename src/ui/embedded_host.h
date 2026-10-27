@@ -7,7 +7,7 @@
 #include "ui/drag.h"
 #include "ui/event.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class EmbeddedWindow;
 
@@ -63,4 +63,4 @@ public:
     virtual bool startDrag(EmbeddedWindow*, DragSource) { return false; }
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

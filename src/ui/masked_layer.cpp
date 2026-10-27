@@ -18,7 +18,7 @@
 #include "include/core/SkPixmap.h"
 #include "include/core/SkShader.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 namespace {
 
@@ -336,4 +336,4 @@ void drawMaskedLayer(SkCanvas* canvas, const MaskedLayerTextures& textures, doub
     canvas->drawRect(quad, paint);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

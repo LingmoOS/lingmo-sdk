@@ -13,7 +13,7 @@
 
 class SkTypeface;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The fonts a character the family lacks is drawn in: every family sorted by
 // fontconfig's FcFontSort of the family's pattern (its slant and the session's
@@ -39,4 +39,4 @@ private:
     std::unordered_map<char32_t, sk_sp<SkTypeface>> m_found;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

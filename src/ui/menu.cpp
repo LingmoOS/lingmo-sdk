@@ -24,7 +24,7 @@
 #include "ui/view.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Row, separator and surface metrics.
 static constexpr double kRowHeight = 30;
@@ -1182,4 +1182,4 @@ void Menu::scheduleSubmenuCheck()
     });
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

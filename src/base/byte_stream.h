@@ -11,7 +11,7 @@
 #include <string>
 #include <string_view>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 template<std::integral T>
 constexpr T byteSwapped(T value)
@@ -114,4 +114,4 @@ inline void ByteReader::seek(size_t position)
         m_position = position;
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

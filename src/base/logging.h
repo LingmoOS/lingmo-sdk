@@ -14,7 +14,7 @@
 #include <string_view>
 #include <type_traits>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 enum class LogLevel { Debug, Info, Warning, Critical, Fatal };
 
@@ -146,16 +146,16 @@ std::string LogStream::streamed(const T& value)
     return streamToString([&value](std::ostream& stream) { stream << value; });
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base
 
 // The arguments after << are only evaluated when the level is enabled.
 #define LM_LOG(category, level) \
     if (!(category).isEnabled(level)) { \
     } else \
-        ::Lingmo::Base::LogStream((category), (level))
+        ::Lingmo::base::LogStream((category), (level))
 
-#define LM_DEBUG(category)    LM_LOG(category, ::Lingmo::Base::LogLevel::Debug)
-#define LM_INFO(category)     LM_LOG(category, ::Lingmo::Base::LogLevel::Info)
-#define LM_WARNING(category)  LM_LOG(category, ::Lingmo::Base::LogLevel::Warning)
-#define LM_CRITICAL(category) LM_LOG(category, ::Lingmo::Base::LogLevel::Critical)
-#define LM_FATAL(category)    LM_LOG(category, ::Lingmo::Base::LogLevel::Fatal)
+#define LM_DEBUG(category)    LM_LOG(category, ::Lingmo::base::LogLevel::Debug)
+#define LM_INFO(category)     LM_LOG(category, ::Lingmo::base::LogLevel::Info)
+#define LM_WARNING(category)  LM_LOG(category, ::Lingmo::base::LogLevel::Warning)
+#define LM_CRITICAL(category) LM_LOG(category, ::Lingmo::base::LogLevel::Critical)
+#define LM_FATAL(category)    LM_LOG(category, ::Lingmo::base::LogLevel::Fatal)

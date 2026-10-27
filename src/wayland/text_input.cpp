@@ -11,7 +11,7 @@
 
 #include "wayland/shell_surface.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 static uint32_t wirePurpose(TextPurpose purpose)
 {
@@ -177,4 +177,4 @@ void TextInput::apply()
     m_inputMethodCause = false;
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

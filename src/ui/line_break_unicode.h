@@ -8,9 +8,9 @@
 
 class SkUnicode;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // ICU for everything but soft line breaks, which come from line_breaks.h.
 sk_sp<SkUnicode> makeLineBreakUnicode(sk_sp<SkUnicode> icu);
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

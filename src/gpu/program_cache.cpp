@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -19,7 +19,7 @@ namespace base = Lingmo::Base;
 #include "base/paths.h"
 #include "base/thread_pool.h"
 
-namespace Lingmo::UI::gpu {
+namespace Lingmo::ui::gpu {
 
 static std::string hexDigest(std::string_view data)
 {
@@ -63,4 +63,4 @@ void ProgramCache::store(const SkData& key, const SkData& data, const SkString&)
     });
 }
 
-} // namespace Lingmo::UI::gpu
+} // namespace Lingmo::ui::gpu

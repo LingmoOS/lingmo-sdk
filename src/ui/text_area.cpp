@@ -28,14 +28,14 @@
 #include "ui/theme.h"
 #include "ui/translation.h"
 #include "ui/window.h"
-namespace base = Lingmo::Base;
+namespace base = Lingmo::base;
 namespace i18n = Lingmo::I18n;
 
 namespace textlayout = skia::textlayout;
 
-namespace ui = Lingmo::UI;
+namespace ui = Lingmo::ui;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A coarse timer of half the cursor flash time fires up to 5% early.
 static constexpr auto kBlinkInterval = std::chrono::milliseconds(475);
@@ -1010,4 +1010,4 @@ void TextArea::startBlinking()
     });
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

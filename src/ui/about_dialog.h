@@ -8,7 +8,7 @@
 #include <memory>
 #include <string>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 
@@ -54,4 +54,4 @@ private:
     std::unique_ptr<Window> m_window;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

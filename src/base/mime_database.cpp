@@ -13,7 +13,7 @@
 #include "base/file.h"
 #include "base/paths.h"
 
-namespace Lingmo::Base::mime {
+namespace Lingmo::base::mime {
 
 namespace {
 
@@ -121,4 +121,4 @@ std::vector<std::string> parents(std::string_view name)
     return {};
 }
 
-} // namespace Lingmo::Base::mime
+} // namespace Lingmo::base::mime

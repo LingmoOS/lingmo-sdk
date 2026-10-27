@@ -12,7 +12,7 @@
 #include "ui/color_id.h"
 #include "ui/geometry.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class ColorProvider;
 struct Theme;
@@ -74,4 +74,4 @@ private:
 // Gives a mixer its recipes for the theme.
 using ColorMixerFunction = std::function<void(ColorMixer& mixer, const Theme& theme)>;
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

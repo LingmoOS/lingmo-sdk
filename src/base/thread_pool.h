@@ -17,7 +17,7 @@
 
 #include "base/event_loop.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // The result of work handed to a thread, on its way back to the loop. When
 // the job is destroyed, reassigned or cancelled, the work still runs to its
@@ -135,4 +135,4 @@ Job runInThread(Work work, Done done)
     return ThreadPool::global().run(std::move(work), std::move(done));
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

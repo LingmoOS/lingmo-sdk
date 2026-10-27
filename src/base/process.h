@@ -11,7 +11,7 @@
 #include <sys/types.h>
 #include <vector>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 class EventLoop;
 
@@ -126,4 +126,4 @@ private:
     std::string m_error;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

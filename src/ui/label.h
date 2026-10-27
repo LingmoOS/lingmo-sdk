@@ -17,7 +17,7 @@ namespace skia::textlayout {
 class Paragraph;
 }
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct AdvanceRule;
 struct TextLineBox;
@@ -251,4 +251,4 @@ private:
     mutable std::vector<std::pair<double, double>> m_measuredHeights;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

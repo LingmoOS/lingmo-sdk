@@ -11,7 +11,7 @@
 
 namespace Lingmo::I18n {
 
-namespace base = Lingmo::Base;
+namespace base = Lingmo::base;
 
 void setDomain(const char* domain)
 {

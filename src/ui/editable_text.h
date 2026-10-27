@@ -11,7 +11,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The text of an editor with its cursor and selection. Positions are UTF-8
 // byte offsets that always sit on grapheme boundaries, so a cursor never
@@ -98,4 +98,4 @@ private:
     Edit m_lastEdit = Edit::None;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

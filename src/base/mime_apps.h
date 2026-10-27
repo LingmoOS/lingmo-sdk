@@ -12,7 +12,7 @@
 // lingmo-framework's MimeApps. Desktop entries come from
 // ApplicationRegistry, so ask once it has loaded. MIME types are named, and
 // an alias stands for its type.
-namespace Lingmo::Base::mimeapps {
+namespace Lingmo::base::mimeapps {
 
 // The user's files under ~/.config, which every choice is written to.
 std::string userListPath();
@@ -43,4 +43,4 @@ std::string defaultApplication(const std::vector<std::string>& paths, const std:
 std::string defaultTerminal(const std::string& path);
 bool setDefaultTerminal(const std::string& path, const std::string& desktopId);
 
-} // namespace Lingmo::Base::mimeapps
+} // namespace Lingmo::base::mimeapps

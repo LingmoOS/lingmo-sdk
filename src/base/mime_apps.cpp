@@ -22,7 +22,7 @@
 #include "base/mime_database.h"
 #include "base/paths.h"
 
-namespace Lingmo::Base::mimeapps {
+namespace Lingmo::base::mimeapps {
 
 using Lines = std::vector<std::string>;
 
@@ -478,4 +478,4 @@ bool setDefaultTerminal(const std::string& path, const std::string& desktopId)
     return writeLines(path, lines);
 }
 
-} // namespace Lingmo::Base::mimeapps
+} // namespace Lingmo::base::mimeapps

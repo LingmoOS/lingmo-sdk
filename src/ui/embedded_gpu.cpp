@@ -17,7 +17,7 @@
 
 #include "ui/embedded_gpu_private.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 EmbeddedGpu::Private::~Private() = default;
 
@@ -219,4 +219,4 @@ GrDirectContext* EmbeddedGpuScope::context() const
     return m_gpu.d->context.get();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

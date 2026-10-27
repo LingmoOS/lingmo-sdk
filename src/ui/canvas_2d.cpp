@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -28,7 +28,7 @@ namespace base = Lingmo::Base;
 #include "ui/painter.h"
 #include "ui/text_layout.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct Canvas2D::Owned
 {
@@ -486,4 +486,4 @@ void Canvas2D::drawText(TextLayout& layout, PointF origin)
     applyMatrix();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

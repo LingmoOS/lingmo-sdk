@@ -11,7 +11,7 @@
 
 #include "base/file.h"
 
-namespace Lingmo::Base::paths {
+namespace Lingmo::base::paths {
 
 std::string home()
 {
@@ -134,4 +134,4 @@ std::string findExecutable(const std::string& program)
     return {};
 }
 
-} // namespace Lingmo::Base::paths
+} // namespace Lingmo::base::paths

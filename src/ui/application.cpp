@@ -24,11 +24,11 @@
 #include "ui/window.h"
 #include "wayland/connection.h"
 
-namespace base = Lingmo::Base;
-namespace dbus = Lingmo::Base::DBus;
+namespace base = Lingmo::base;
+namespace dbus = Lingmo::base::dbus;
 namespace i18n = Lingmo::I18n;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static Application* s_instance = nullptr;
 
@@ -214,4 +214,4 @@ void Application::quit(int exitCode)
     m_loop->quit(exitCode);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

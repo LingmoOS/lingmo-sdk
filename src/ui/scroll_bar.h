@@ -10,7 +10,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Animation;
 
@@ -83,4 +83,4 @@ private:
     std::unique_ptr<Animation> m_fade;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

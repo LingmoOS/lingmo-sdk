@@ -6,7 +6,7 @@
 
 #include <cstdint>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 
@@ -52,4 +52,4 @@ private:
     bool m_ticking = false;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

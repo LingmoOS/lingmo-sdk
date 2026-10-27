@@ -10,7 +10,7 @@
 
 #include "ui/gif_decoder.h"
 
-namespace Lingmo::UI::image_formats {
+namespace Lingmo::ui::image_formats {
 
 // A 256 MiB allocation limit, in pixels of four bytes.
 static constexpr int64_t kMaximumPixels = int64_t(256) * 1024 * 1024 / 4;
@@ -387,4 +387,4 @@ std::optional<std::string> largestIcnsPng(std::string_view data)
     return std::string(best);
 }
 
-} // namespace Lingmo::UI::image_formats
+} // namespace Lingmo::ui::image_formats

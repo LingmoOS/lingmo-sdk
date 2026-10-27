@@ -12,7 +12,7 @@
 
 #include "ui/scroll_view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A scrolling list of rows of one height. Only the rows in sight have views:
 // they are made by createItem, filled by bindItem, and reused for other rows
@@ -58,4 +58,4 @@ private:
     std::vector<View*> m_spare;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

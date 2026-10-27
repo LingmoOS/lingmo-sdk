@@ -18,7 +18,7 @@
 
 // Helpers for UTF-8 std::string text. Case folding and whitespace are ASCII
 // only; text that needs Unicode rules goes through ICU.
-namespace Lingmo::Base::strings {
+namespace Lingmo::base::strings {
 
 enum class CaseSensitivity { Sensitive, Insensitive };
 enum class SplitBehavior { KeepEmptyParts, SkipEmptyParts };
@@ -187,4 +187,4 @@ std::optional<T> toNumber(std::string_view text, int base)
     }
 }
 
-} // namespace Lingmo::Base::strings
+} // namespace Lingmo::base::strings

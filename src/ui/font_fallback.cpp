@@ -15,7 +15,7 @@
 #include "ui/application.h"
 #include "ui/text_context.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Characters remembered before the cache starts over: text shown over a long
 // session, such as a terminal's, may go through any number of them.
@@ -102,4 +102,4 @@ sk_sp<SkTypeface> FontFallback::typefaceFor(char32_t character)
     return found;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

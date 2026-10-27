@@ -8,7 +8,7 @@
 
 #include "include/gpu/ganesh/GrContextOptions.h"
 
-namespace Lingmo::UI::gpu {
+namespace Lingmo::ui::gpu {
 
 // Linked GL programs kept on disk between runs, so a first frame does not
 // compile the shaders earlier runs drew with. A binary only loads on the
@@ -31,4 +31,4 @@ private:
     bool m_pruned = false;
 };
 
-} // namespace Lingmo::UI::gpu
+} // namespace Lingmo::ui::gpu

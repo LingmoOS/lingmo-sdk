@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include "wayland/selection.h"
 
@@ -13,7 +13,7 @@ struct wl_seat;
 struct zwp_primary_selection_device_manager_v1;
 struct zwp_primary_selection_device_v1;
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 struct PrimarySelectionListeners;
 
@@ -39,4 +39,4 @@ private:
     zwp_primary_selection_device_v1* m_device = nullptr;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

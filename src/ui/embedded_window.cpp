@@ -29,7 +29,7 @@
 #include "ui/text_context.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static uint64_t monotonicNs()
 {
@@ -564,4 +564,4 @@ uint32_t EmbeddedWindow::drop()
     return handleDrop();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

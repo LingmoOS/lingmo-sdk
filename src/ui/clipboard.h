@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <functional>
 #include <optional>
@@ -15,7 +15,7 @@ namespace base = Lingmo::Base;
 
 #include "base/signal.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Which of the seat's selections.
 enum class ClipboardMode {
@@ -89,4 +89,4 @@ public:
     static base::Signal<ClipboardMode>& changed();
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

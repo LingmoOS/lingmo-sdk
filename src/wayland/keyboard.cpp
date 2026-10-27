@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -20,7 +20,7 @@ namespace base = Lingmo::Base;
 #include "base/event_loop.h"
 #include "wayland/shell_surface.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 struct KeyboardListeners
 {
@@ -292,4 +292,4 @@ void Keyboard::stopRepeat()
     m_repeatKeycode = 0;
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

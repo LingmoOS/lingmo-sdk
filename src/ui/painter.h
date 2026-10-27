@@ -15,7 +15,7 @@ class SkCanvas;
 class SkImage;
 class SkPath;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Image;
 
@@ -145,4 +145,4 @@ private:
     std::vector<State> m_saved;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

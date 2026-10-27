@@ -13,7 +13,7 @@
 #include "ui/color_mixer.h"
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A row of equal buttons, one of them current: a segmented control, a pill, or
 // its tab bar, a rounded box. Each button is a Tab stop of its own; Space
@@ -91,4 +91,4 @@ public:
     }
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <memory>
 #include <optional>
@@ -17,7 +17,7 @@ namespace base = Lingmo::Base;
 #include "ui/geometry.h"
 #include "ui/path.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Draws into a Bitmap on the CPU, in coordinates the transform maps to the
 // bitmap's pixels. Antialiasing starts off, as the common 2D painter has it.
@@ -99,4 +99,4 @@ private:
     std::unique_ptr<Canvas> m_canvas;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

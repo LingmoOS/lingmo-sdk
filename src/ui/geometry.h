@@ -6,7 +6,7 @@
 
 #include <cstdint>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct PointF
 {
@@ -133,4 +133,4 @@ struct Color
     bool operator==(const Color&) const = default;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

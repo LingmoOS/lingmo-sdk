@@ -11,7 +11,7 @@
 #include "ui/geometry.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class View;
 
@@ -101,4 +101,4 @@ private:
     RectF m_screenRect;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

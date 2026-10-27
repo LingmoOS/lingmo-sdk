@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 ThreadPool::ThreadPool(int maxThreads)
     : m_maxThreads(std::max(maxThreads, 1))
@@ -61,4 +61,4 @@ void ThreadPool::threadMain()
     }
 }
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

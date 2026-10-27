@@ -13,7 +13,7 @@
 
 class GrDirectContext;
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class EmbeddedGpuScope;
 
@@ -63,4 +63,4 @@ private:
     float m_clearColor[4] = {};
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -23,11 +23,11 @@ struct sd_bus_message;
 struct sd_bus_slot;
 struct sd_bus_vtable;
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class EventLoop;
 }
 
-namespace Lingmo::Base::DBus {
+namespace Lingmo::base::dbus {
 
 class Connection;
 
@@ -567,4 +567,4 @@ void Object::addProperty(const std::string& name, Getter getter, Setter setter)
     };
 }
 
-} // namespace Lingmo::Base::DBus
+} // namespace Lingmo::base::dbus

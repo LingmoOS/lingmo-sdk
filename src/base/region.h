@@ -12,7 +12,7 @@
 
 #include "base/geometry.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // A set of whole pixels, kept as y-x banded rectangles: sorted by top, then
 // left; rectangles in a band share top and bottom and never touch; vertically
@@ -81,4 +81,4 @@ private:
 
 std::ostream& operator<<(std::ostream& stream, const Region& region);
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

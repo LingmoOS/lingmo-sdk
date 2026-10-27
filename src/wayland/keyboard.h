@@ -4,8 +4,8 @@
 
 #pragma once
 
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 #include <cstdint>
 #include <functional>
@@ -22,11 +22,11 @@ struct xkb_compose_table;
 struct xkb_keymap;
 struct xkb_state;
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 class EventLoop;
 }
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 class ShellSurface;
 struct KeyboardListeners;
@@ -89,4 +89,4 @@ private:
     std::vector<std::pair<uint32_t, uint32_t>> m_pendingKeys;
 };
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

@@ -19,7 +19,7 @@
 #include "ui/translation.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The dialog's metrics.
 static constexpr double kHeaderHeight = 44;
@@ -472,4 +472,4 @@ void ConfirmDialog::finish(bool accepted)
         onRejected();
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -10,7 +10,7 @@
 #include "base/geometry.h"
 #include "base/region.h"
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // A 2D affine transform with row vectors, laid out and composed as the
 // common 2D graphics transform: a point maps to
@@ -101,4 +101,4 @@ private:
 
 std::ostream& operator<<(std::ostream& stream, const AffineTransform& transform);
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

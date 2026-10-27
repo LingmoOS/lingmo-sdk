@@ -12,7 +12,7 @@
 #include <type_traits>
 #include <vector>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // An INI file in the common desktop dialect, read and written both ways with
 // other programs: keys outside a group in [General], "group/key" keys, %XX
@@ -111,4 +111,4 @@ private:
     std::map<std::string, std::optional<std::string>> m_changes;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

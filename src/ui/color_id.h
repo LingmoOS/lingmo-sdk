@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <type_traits>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // A colour named by what it is for; ColorProvider gives its value in the
 // current theme. An application names its own colours in an enumeration of
@@ -122,4 +122,4 @@ enum class ColorId : uint16_t {
 template<typename Id>
 concept ColorIdType = std::is_enum_v<Id> && std::same_as<std::underlying_type_t<Id>, uint16_t>;
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -19,7 +19,7 @@
 #include "ui/view.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 static constexpr std::chrono::milliseconds kAnimation{400};
 // RowLayout's and GridLayout's default spacing.
@@ -296,4 +296,4 @@ void Toast::show(std::string message, std::chrono::milliseconds timeout, std::st
                                           [stack] { stack->requestLayout(); }));
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

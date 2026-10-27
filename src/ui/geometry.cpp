@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cmath>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 struct Hsv
 {
@@ -103,4 +103,4 @@ Color Color::lighter(double factor) const
     return fromHsv(hsv, a);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

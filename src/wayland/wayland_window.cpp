@@ -24,7 +24,7 @@
 #include "wayland/data_device.h"
 #include "wayland/text_input.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 WaylandWindow::WaylandWindow(Window* window)
     : WaylandWindow(window, Application::instance()->connection(), Application::instance()->gpu())
@@ -576,4 +576,4 @@ void WaylandWindow::textInput(const TextInputEvent& event)
     notifyTextInput(event);
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

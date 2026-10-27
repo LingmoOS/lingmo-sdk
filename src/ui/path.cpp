@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -17,7 +17,7 @@ namespace base = Lingmo::Base;
 #include "include/pathops/SkPathOps.h"
 #include "ui/path_private.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The control point distance that makes a cubic follow a quarter circle.
 static constexpr double kKappa = 0.5522847498;
@@ -558,4 +558,4 @@ Path Path::stroked(double width, LineCap cap, LineJoin join, double miterLimit) 
     return result;
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

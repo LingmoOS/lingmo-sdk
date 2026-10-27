@@ -12,7 +12,7 @@
 
 #include "modules/skcms/skcms.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The colours a decoder's RGB pixels are in, for turning them into the sRGB
 // everything is drawn in.
@@ -46,4 +46,4 @@ private:
     skcms_ICCProfile m_profile;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

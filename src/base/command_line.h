@@ -8,7 +8,7 @@
 #include <string_view>
 #include <vector>
 
-namespace Lingmo::Base {
+namespace Lingmo::base {
 
 // An option: one-letter names are written -x, longer ones --name. With a
 // value name the option takes a value, as `--name value` or `--name=value`
@@ -109,4 +109,4 @@ private:
     int m_versionIndex = -1;
 };
 
-} // namespace Lingmo::Base
+} // namespace Lingmo::base

@@ -6,7 +6,7 @@
 
 #include <algorithm>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // Where a child of the given length starts in the given space.
 static double aligned(Alignment alignment, double space, double length)
@@ -341,4 +341,4 @@ void Grid::layout()
     }
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

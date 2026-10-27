@@ -8,7 +8,7 @@
 
 #include "ui/view.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // An icon as an image provider's pixmap: the theme's icon by name
 // (Theme::iconTheme, then hicolor, then /usr/share/pixmaps), or the file at an
@@ -39,4 +39,4 @@ private:
     int m_pixels;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

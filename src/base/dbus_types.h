@@ -17,7 +17,7 @@
 #include <variant>
 #include <vector>
 
-namespace Lingmo::Base::DBus {
+namespace Lingmo::base::dbus {
 
 struct ObjectPath
 {
@@ -345,4 +345,4 @@ std::string signatureOf()
     return (Type<std::decay_t<Ts>>::signature() + ... + std::string());
 }
 
-} // namespace Lingmo::Base::DBus
+} // namespace Lingmo::base::dbus

@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -18,7 +18,7 @@ namespace base = Lingmo::Base;
 #include "base/file.h"
 #include "wayland/connection.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 const char* const kTextMimeTypes[5] = {
     "text/plain;charset=utf-8",
@@ -282,4 +282,4 @@ const std::vector<std::string>* Selection::offerTypes(void* offer) const
     return it == m_offers.end() ? nullptr : &it->second;
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

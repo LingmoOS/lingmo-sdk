@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -16,7 +16,7 @@ namespace base = Lingmo::Base;
 #include "ui/platform_window.h"
 #include "ui/window.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 // The end of a resize comes before the configure carrying its last size.
 static constexpr auto kSaveDelay = std::chrono::milliseconds(300);
@@ -114,4 +114,4 @@ void Window::saveMaximized()
         settings.remove(key);
 }
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

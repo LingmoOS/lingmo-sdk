@@ -11,7 +11,7 @@
 #include <utility>
 #include <vector>
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Window;
 
@@ -101,4 +101,4 @@ private:
     std::shared_ptr<char> m_alive = std::make_shared<char>();
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

@@ -1,5 +1,5 @@
-namespace Lingmo::Base { class EventLoop; }
-namespace base = Lingmo::Base;
+namespace Lingmo::base { class EventLoop; }
+namespace base = Lingmo::base;
 
 // SPDX-FileCopyrightText: 2026 Reion Wong <reionwong@gmail.com>
 // SPDX-FileCopyrightText: 2026 LingmoOS Contributors
@@ -42,7 +42,7 @@ namespace base = Lingmo::Base;
 #include "wayland/text_input.h"
 #include "wayland/shell_surface.h"
 
-namespace Lingmo::UI::wayland {
+namespace Lingmo::ui::wayland {
 
 static ShellSurface* shellSurfaceFor(wl_surface* surface)
 {
@@ -963,4 +963,4 @@ void Connection::flush()
     wl_display_flush(m_display);
 }
 
-} // namespace Lingmo::UI::wayland
+} // namespace Lingmo::ui::wayland

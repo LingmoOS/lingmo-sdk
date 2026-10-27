@@ -10,7 +10,7 @@
 
 #include "ui/toggle_control.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Icon;
 class RadioButton;
@@ -74,4 +74,4 @@ private:
     ButtonGroup* m_group = nullptr;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui

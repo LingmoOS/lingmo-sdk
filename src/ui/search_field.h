@@ -9,7 +9,7 @@
 
 #include "ui/text_field.h"
 
-namespace Lingmo::UI {
+namespace Lingmo::ui {
 
 class Icon;
 
@@ -47,4 +47,4 @@ private:
     ClearButton* m_clear;
 };
 
-} // namespace Lingmo::UI
+} // namespace Lingmo::ui
