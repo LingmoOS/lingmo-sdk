@@ -64,14 +64,14 @@ TEST_F(LoggingTest, StreamSeparatesWithSpaces)
 {
     const LogCategory category("test.stream");
     const int* pointer = nullptr;
-    CF_INFO(category) << "size" << 3 << 1.5 << true << 'x' << std::string("s") << Rect(1, 2, 3, 4)
+    LM_INFO(category) << "size" << 3 << 1.5 << true << 'x' << std::string("s") << Rect(1, 2, 3, 4)
                       << Mode::On << pointer;
     ASSERT_EQ(m_messages.size(), 1u);
     EXPECT_EQ(m_messages[0].category, "test.stream");
     EXPECT_EQ(m_messages[0].level, LogLevel::Info);
     EXPECT_EQ(m_messages[0].message, "size 3 1.5 true x s 1,2 3x4 3 0x0");
 
-    CF_WARNING(category).nospace() << "a" << 1 << "b";
+    LM_WARNING(category).nospace() << "a" << 1 << "b";
     EXPECT_EQ(m_messages.back().message, "a1b");
     EXPECT_EQ(m_messages.back().level, LogLevel::Warning);
 }
@@ -79,11 +79,11 @@ TEST_F(LoggingTest, StreamSeparatesWithSpaces)
 TEST_F(LoggingTest, FormatAndPrintf)
 {
     const LogCategory category("test.format");
-    CF_CRITICAL(category).format("{} of {}", 2, "three");
+    LM_CRITICAL(category).format("{} of {}", 2, "three");
     EXPECT_EQ(m_messages.back().message, "2 of three");
-    CF_WARNING(category).printf("Failed to map %d bytes: %s", 64, "No memory");
+    LM_WARNING(category).printf("Failed to map %d bytes: %s", 64, "No memory");
     EXPECT_EQ(m_messages.back().message, "Failed to map 64 bytes: No memory");
-    CF_INFO(category) << "prefix" << std::string_view("x");
+    LM_INFO(category) << "prefix" << std::string_view("x");
     EXPECT_EQ(m_messages.back().message, "prefix x");
 }
 
@@ -92,16 +92,16 @@ TEST_F(LoggingTest, DisabledMessagesAreNotEvaluated)
     const LogCategory category("test.lazy");
     int evaluated = 0;
     const auto touch = [&] { return ++evaluated; };
-    CF_DEBUG(category) << touch();
+    LM_DEBUG(category) << touch();
     EXPECT_EQ(evaluated, 0);
     EXPECT_TRUE(m_messages.empty());
-    CF_INFO(category) << touch();
+    LM_INFO(category) << touch();
     EXPECT_EQ(evaluated, 1);
 
     // The macro is one statement inside an unbraced if/else.
     bool other = false;
     if (evaluated == 0)
-        CF_INFO(category) << "never";
+        LM_INFO(category) << "never";
     else
         other = true;
     EXPECT_TRUE(other);
