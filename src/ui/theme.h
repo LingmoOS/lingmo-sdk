@@ -40,7 +40,7 @@ struct Theme
     // The appearance's fixed-pitch family; empty for the platform's default.
     std::string fixedFontFamily;
     double fontPointSize = 9;
-    std::string iconTheme = "Lingmo";
+    std::string iconTheme = "lingmo-light";
     // The compositor's window corners on large panels.
     bool continuousCorners = true;
 
