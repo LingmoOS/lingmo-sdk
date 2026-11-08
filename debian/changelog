@@ -1,3 +1,10 @@
+lingmo-sdk (5.0.2+lingmo5u2) unstable; urgency=medium
+
+  * Reload appearance when the service starts after SDK applications.
+  * Refresh icon lookup caches on theme changes and add a startup regression test.
+
+ -- Lingmo OS Team <team@lingmo.org>  Sun, 08 Nov 2026 12:00:00 +0800
+
 lingmo-sdk (5.0.2+lingmo5u1) unstable; urgency=medium
 
   * theme: change default icon theme from "Lingmo" to "lingmo-light" to

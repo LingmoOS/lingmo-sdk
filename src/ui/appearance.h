@@ -8,6 +8,7 @@ namespace Lingmo::base { class EventLoop; }
 namespace base = Lingmo::base;
 
 #include <systemd/sd-bus.h>
+#include "base/dbus.h"
 
 namespace Lingmo::base::dbus {
 class Connection;
@@ -37,11 +38,13 @@ public:
     void waitForSettings();
 
 private:
+    void reload();
     static int changed(sd_bus_message* message, void* data, sd_bus_error* error);
     static int replied(sd_bus_message* reply, void* data, sd_bus_error* error);
     static void apply(sd_bus_message* reply);
 
     dbus::Connection& m_connection;
+    dbus::NameWatch m_serviceWatch;
     sd_bus_slot* m_match = nullptr;
     sd_bus_slot* m_call = nullptr;
     // The first reply, held until waitForSettings() applies it.

@@ -32,8 +32,18 @@ AppearanceWatcher::AppearanceWatcher(dbus::Connection& connection)
     sd_bus* bus = connection.bus();
     sd_bus_match_signal_async(bus, &m_match, kService, kPath, kInterface, nullptr,
                               &AppearanceWatcher::changed, nullptr, this);
-    sd_bus_call_method_async(bus, &m_call, kService, kPath, "org.freedesktop.DBus.Properties", "GetAll",
-                             &AppearanceWatcher::replied, this, "s", kInterface);
+    reload();
+    m_serviceWatch = connection.watchName(kService, [this](const std::string& owner) {
+        if (!owner.empty()) reload();
+    });
+}
+
+void AppearanceWatcher::reload()
+{
+    m_call = sd_bus_slot_unref(m_call);
+    sd_bus_call_method_async(m_connection.bus(), &m_call, kService, kPath,
+                            "org.freedesktop.DBus.Properties", "GetAll",
+                            &AppearanceWatcher::replied, this, "s", kInterface);
 }
 
 void AppearanceWatcher::advance()
@@ -74,11 +84,7 @@ int AppearanceWatcher::changed(sd_bus_message* message, void* data, sd_bus_error
     if (!member || std::strstr(member, "allpaper") || std::strstr(member, "ursor")
         || std::strstr(member, "ackground"))
         return 0;
-    sd_bus_slot_unref(self->m_call);
-    self->m_call = nullptr;
-    sd_bus_call_method_async(self->m_connection.bus(), &self->m_call, kService, kPath,
-                             "org.freedesktop.DBus.Properties", "GetAll",
-                             &AppearanceWatcher::replied, self, "s", kInterface);
+    self->reload();
     return 0;
 }
 

@@ -25,6 +25,7 @@ class IconLoader
 {
 public:
     static IconLoader& instance();
+    void invalidateThemeLookup();
 
     // One of the toolkit's single-colour glyphs, in the colour, at a device
     // size; the scale tells its logical size, which picks the heavier

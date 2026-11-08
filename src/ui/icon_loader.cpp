@@ -629,6 +629,18 @@ std::vector<IconLoader::GtkCache::Image> IconLoader::GtkCache::lookup(const std:
     return directories;
 }
 
+void IconLoader::invalidateThemeLookup()
+{
+    m_paths.clear();
+    m_themes.clear();
+    for (auto it=m_images.begin(); it!=m_images.end();) {
+        if (it->first.starts_with("theme:") || it->first.starts_with("pixmap:")) {
+            m_index.erase(it->first);
+            it=m_images.erase(it);
+        } else ++it;
+    }
+}
+
 IconLoader::IconTheme& IconLoader::theme(const std::string& name)
 {
     IconTheme& theme = m_themes[name];

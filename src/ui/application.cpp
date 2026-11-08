@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "ui/application.h"
+#include "ui/icon_loader.h"
 #include "base/i18n.h"
 
 #include <clocale>
@@ -168,6 +169,7 @@ void Application::languageEnvironmentChanged()
 
 void Application::themeChanged()
 {
+    IconLoader::instance().invalidateThemeLookup();
     clearSubpixelCoverage();
     for (Window* window : m_windows)
         window->handleThemeChanged();
