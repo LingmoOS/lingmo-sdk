@@ -68,6 +68,7 @@ add_executable(lingmo-sdk-tests
     text_cost_test.cpp
     text_field_test.cpp
     text_layout_test.cpp
+    text_markup_test.cpp
     text_metrics_test.cpp
     window_test.cpp
     window_tab_bar_test.cpp

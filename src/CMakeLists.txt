@@ -119,6 +119,7 @@ set(LINGMO_TOOLKIT_PUBLIC_HEADERS
     ui/text_area.h
     ui/text_field.h
     ui/text_layout.h
+    ui/text_markup.h
     ui/theme.h
     ui/toast.h
     ui/trusted_connection.h
@@ -211,6 +212,7 @@ add_library(lingmo-sdk SHARED
     ui/text_area.cpp
     ui/text_field.cpp
     ui/text_layout.cpp
+    ui/text_markup.cpp
     ui/text_context.cpp
     ui/text_lines.cpp
     ui/theme.cpp
