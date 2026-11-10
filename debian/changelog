@@ -1,3 +1,9 @@
+lingmo-sdk (5.0.2+lingmo5u3) unstable; urgency=medium
+
+  * Add a shared styled text parser for notification and update markup.
+
+ -- Lingmo OS Team <team@lingmo.org>  Tue, 10 Nov 2026 14:29:04 +0800
+
 lingmo-sdk (5.0.2+lingmo5u2) unstable; urgency=medium
 
   * Reload appearance when the service starts after SDK applications.
