@@ -1,7 +1,7 @@
 # Lingmo Toolkit
 
 The UI toolkit of the Lingmo desktop: a Wayland client for
-lingmo-compositor, drawing with Skia on GLES, with retained views, text
+lingmo-aurora, drawing with Skia on GLES, with retained views, text
 layout, controls and frame-paced animation.
 
 ## Dependencies

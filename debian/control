@@ -38,7 +38,7 @@ Depends: ${misc:Depends},
 Recommends: libjxl0.11
 Description: Lingmo SDK - runtime libraries
  The SDK every Lingmo application is built with: a Wayland client for
- lingmo-compositor that draws with Skia on GLES, with retained views, text
+ lingmo-aurora that draws with Skia on GLES, with retained views, text
  layout, controls and frame-paced animation.
  .
  This package contains the shared libraries.
@@ -66,7 +66,7 @@ Depends: lingmo-sdk (= ${binary:Version}),
          libheif-dev
 Description: Lingmo SDK - development files
  The SDK every Lingmo application is built with: a Wayland client for
- lingmo-compositor that draws with Skia on GLES, with retained views, text
+ lingmo-aurora that draws with Skia on GLES, with retained views, text
  layout, controls and frame-paced animation.
  .
  This package contains the header files, CMake configuration, and static

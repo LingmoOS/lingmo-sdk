@@ -43,7 +43,7 @@ lingmo_wayland_protocol(xdg-output-unstable-v1
 # cursor-shape-v1 refers to the tablet tool interface.
 lingmo_wayland_protocol(tablet-unstable-v2
     ${WAYLAND_PROTOCOLS_DATADIR}/unstable/tablet/tablet-unstable-v2.xml)
-# Copies of lingmo-compositor's protocols; the copies must stay identical.
+# Copies of lingmo-aurora's protocols; the copies must stay identical.
 lingmo_wayland_protocol(lingmo-window-hints-v1
     ${PROJECT_SOURCE_DIR}/protocols/lingmo-window-hints-v1.xml)
 lingmo_wayland_protocol(lingmo-surface-blur-v1
