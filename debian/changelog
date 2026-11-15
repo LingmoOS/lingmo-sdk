@@ -1,9 +1,3 @@
-lingmo-sdk (5.0.11+lingmo5u1) unstable; urgency=medium
-
-  * Preserve both Debian and RPM sources in the OBS package.
-
- -- Lingmo OS Team <team@lingmo.org>  Mon, 16 Nov 2026 20:25:00 +0800
-
 lingmo-sdk (5.0.10+lingmo5u1) unstable; urgency=medium
 
   * Keep Debian and RPM source publication in separate workflows.
