@@ -1,5 +1,5 @@
 Name:           lingmo-sdk
-Version:        5.0.12
+Version:        5.0.11
 Release:        1.lingmo5u1%{?dist}
 Summary:        Lingmo desktop application SDK
 License:        GPL-3.0-or-later
@@ -8,7 +8,6 @@ Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:  cmake >= 3.22
 BuildRequires:  gcc-c++
-BuildRequires:  clang
 BuildRequires:  pkgconfig
 BuildRequires:  wayland-devel >= 1.23
 BuildRequires:  wayland-protocols-devel >= 1.39
@@ -55,5 +54,5 @@ applications.
 %{_libdir}/cmake/LingmoSDK/
 
 %changelog
-* Mon Nov 16 2026 Lingmo OS Team <team@lingmo.org> - 5.0.12-1.lingmo5u1
-- Declare Clang for the Skia GN build on Fedora.
+* Mon Nov 16 2026 Lingmo OS Team <team@lingmo.org> - 5.0.11-1.lingmo5u1
+- Preserve both Debian and RPM sources in the OBS package.
