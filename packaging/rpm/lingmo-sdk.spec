@@ -1,5 +1,5 @@
 Name:           lingmo-sdk
-Version:        5.0.6
+Version:        5.0.7
 Release:        1.lingmo5u1%{?dist}
 Summary:        Lingmo desktop application SDK
 License:        GPL-3.0-or-later
@@ -54,5 +54,5 @@ applications.
 %{_libdir}/cmake/LingmoSDK/
 
 %changelog
-* Mon Nov 16 2026 Lingmo OS Team <team@lingmo.org> - 5.0.6-1.lingmo5u1
-- Make the RPM source workflow independent from the runner RPM database.
+* Mon Nov 16 2026 Lingmo OS Team <team@lingmo.org> - 5.0.7-1.lingmo5u1
+- Use the validated RPM source workflow structure.
