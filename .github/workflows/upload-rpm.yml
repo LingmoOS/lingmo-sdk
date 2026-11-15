@@ -18,7 +18,7 @@ jobs:
       - name: Install RPM tooling
         run: |
           sudo apt-get update
-          sudo apt-get install -y git rpm devscripts debhelper curl python3
+          sudo apt-get install -y git rpm devscripts debhelper curl
 
       - name: Checkout source
         uses: actions/checkout@v4
@@ -33,16 +33,8 @@ jobs:
           test -n "$rpm_version"
           top="$PWD/rpmbuild"
           mkdir -p "$top/SOURCES" "$top/SPECS" "$top/SRPMS"
-          source_root="$PWD/rpm-source-tree/lingmo-sdk-${rpm_version}"
-          mkdir -p "$source_root"
-          git archive "${GITHUB_SHA}" | tar -x -C "$source_root"
-          # Skia is intentionally not tracked in Git. Include the pinned
-          # source tree in the SRPM so OBS builds never need network access.
-          bash "$source_root/scripts/fetch-skia.sh"
-          sed -i '\|^/third_party/skia/|d' "$source_root/.gitignore"
-          rm -rf "$source_root/third_party/skia/.git"
-          tar -czf "$top/SOURCES/lingmo-sdk-${rpm_version}.tar.gz" \
-            -C "$PWD/rpm-source-tree" "lingmo-sdk-${rpm_version}"
+          git archive --format=tar.gz --prefix="lingmo-sdk-${rpm_version}/" \
+            "${GITHUB_SHA}" > "$top/SOURCES/lingmo-sdk-${rpm_version}.tar.gz"
           cp packaging/rpm/lingmo-sdk.spec "$top/SPECS/"
           rpmbuild -bs --nodeps --define "_topdir $top" "$top/SPECS/lingmo-sdk.spec"
           dpkg-buildpackage -S -us -uc -d
