@@ -21,9 +21,7 @@ jobs:
           mkdir -p rpmbuild/SOURCES rpmbuild/SPECS rpm-obs-source
           git archive --format=tar.gz --prefix="lingmo-sdk-${v}/" "$GITHUB_SHA" > "rpmbuild/SOURCES/lingmo-sdk-${v}.tar.gz"
           cp packaging/rpm/lingmo-sdk.spec rpmbuild/SPECS/
-          # OBS resolves BuildRequires. GitHub's Ubuntu runner does not carry
-          # the target RPM development packages, so only create the SRPM here.
-          rpmbuild -bs --nodeps --define "_topdir $PWD/rpmbuild" rpmbuild/SPECS/lingmo-sdk.spec
+          rpmbuild -bs --define "_topdir $PWD/rpmbuild" rpmbuild/SPECS/lingmo-sdk.spec
           dpkg-buildpackage -S -us -uc -d
           cp "rpmbuild/SOURCES/lingmo-sdk-${v}.tar.gz" packaging/rpm/lingmo-sdk.spec rpm-obs-source/
           cp ../lingmo-sdk_*.dsc ../lingmo-sdk_*.tar.* rpm-obs-source/
