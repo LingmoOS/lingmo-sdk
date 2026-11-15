@@ -1,9 +1,3 @@
-lingmo-sdk (5.0.5+lingmo5u1) unstable; urgency=medium
-
-  * Add RPM runtime and development packages with OBS source CI.
-
- -- Lingmo OS Team <team@lingmo.org>  Mon, 16 Nov 2026 18:30:00 +0800
-
 lingmo-sdk (5.0.4+lingmo5u1) unstable; urgency=medium
 
   * Update references to the compositor's Aurora product name.
