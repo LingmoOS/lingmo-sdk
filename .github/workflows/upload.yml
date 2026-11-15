@@ -47,8 +47,7 @@ jobs:
       - name: Upload
         uses: LingmoOS/action-upload-to-obs@0.0.4
         with:
-          # Keep the RPM tarball published by upload-rpm.yml.
-          remove-old-sources: false
+          remove-old-sources: true
           obs-package-name: 'lingmo-sdk'
           obs-project-name: 'home:LingmoOS'
           obs-user-name: ${{ secrets.OBS_USERNAME }}
