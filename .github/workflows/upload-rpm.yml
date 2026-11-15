@@ -45,12 +45,15 @@ jobs:
             -C "$PWD/rpm-source-tree" "lingmo-sdk-${rpm_version}"
           cp packaging/rpm/lingmo-sdk.spec "$top/SPECS/"
           rpmbuild -bs --nodeps --define "_topdir $top" "$top/SPECS/lingmo-sdk.spec"
+          (cd "$source_root" && dpkg-buildpackage -S -us -uc -d)
           mkdir -p rpm-source-output rpm-obs-source
           cp "$top/SOURCES/lingmo-sdk-${rpm_version}.tar.gz" rpm-source-output/
           cp "$top/SPECS/lingmo-sdk.spec" rpm-source-output/
           cp "$top/SRPMS/"*.src.rpm rpm-source-output/
           cp "$top/SOURCES/lingmo-sdk-${rpm_version}.tar.gz" rpm-obs-source/
           cp "$top/SPECS/lingmo-sdk.spec" rpm-obs-source/
+          cp "$source_root"/../lingmo-sdk_*.dsc "$source_root"/../lingmo-sdk_*.tar.* rpm-obs-source/
+          cp "$source_root"/../lingmo-sdk_*.dsc "$source_root"/../lingmo-sdk_*.tar.* rpm-source-output/
 
       - name: Upload RPM source package
         uses: actions/upload-artifact@v4
@@ -63,9 +66,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: LingmoOS/action-upload-to-obs@0.0.4
         with:
-          # Debian sources are managed by upload.yml. Keep them while adding
-          # the RPM tarball and spec to the same OBS package.
-          remove-old-sources: false
+          remove-old-sources: true
           obs-package-name: 'lingmo-sdk'
           obs-project-name: 'home:LingmoOS'
           obs-user-name: ${{ secrets.OBS_USERNAME }}
