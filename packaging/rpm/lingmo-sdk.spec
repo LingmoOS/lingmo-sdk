@@ -1,5 +1,5 @@
 Name:           lingmo-sdk
-Version:        5.0.9
+Version:        5.0.10
 Release:        1.lingmo5u1%{?dist}
 Summary:        Lingmo desktop application SDK
 License:        GPL-3.0-or-later
@@ -54,5 +54,5 @@ applications.
 %{_libdir}/cmake/LingmoSDK/
 
 %changelog
-* Mon Nov 16 2026 Lingmo OS Team <team@lingmo.org> - 5.0.9-1.lingmo5u1
-- Generate Debian and RPM sources from the same Skia-complete tree.
+* Mon Nov 16 2026 Lingmo OS Team <team@lingmo.org> - 5.0.10-1.lingmo5u1
+- Keep Debian and RPM source publication in separate workflows.
