@@ -5,13 +5,16 @@
 #pragma once
 
 #include <functional>
+#include <memory>
 #include <string>
 
+#include "ui/geometry.h"
 #include "ui/view.h"
 
 namespace Lingmo::ui {
 
 class Label;
+class Animation;
 
 class Button : public View
 {
@@ -22,6 +25,7 @@ public:
     void setText(std::string text);
 
     SizeF sizeHint() const override;
+    RectF visualRect() const override;
     bool acceptsPointer() const override { return true; }
     bool acceptsFocus() const override { return true; }
 
@@ -40,8 +44,18 @@ protected:
     bool keyRelease(const KeyEvent& event) override;
 
 private:
+    void animateHover(double target);
+    void beginRipple(PointF origin);
+    void fadeRipple();
+
     Label* m_label;
-    bool m_hovered = false;
+    std::unique_ptr<Animation> m_hoverAnimation;
+    std::unique_ptr<Animation> m_rippleAnimation;
+    std::unique_ptr<Animation> m_rippleFadeAnimation;
+    PointF m_rippleOrigin;
+    double m_hoverAmount = 0;
+    double m_rippleProgress = 0;
+    double m_rippleOpacity = 0;
     bool m_pressed = false;
 };
 
