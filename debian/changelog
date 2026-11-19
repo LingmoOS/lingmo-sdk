@@ -1,3 +1,11 @@
+lingmo-sdk (5.0.8+lingmo5u1) unstable; urgency=medium
+
+  * Keep sidebar item text colors synchronized when the current item changes.
+  * Fix the shared sidebar implementation's color provider dependency.
+  * Add reusable SDK sidebar navigation items and list layout.
+
+ -- Lingmo OS Team <team@lingmo.org>  Fri, 20 Nov 2026 16:00:00 +0800
+
 lingmo-sdk (5.0.5+lingmo5u1) unstable; urgency=medium
 
   * Add animated Material-style button interaction states.

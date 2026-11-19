@@ -109,6 +109,7 @@ set(LINGMO_TOOLKIT_PUBLIC_HEADERS
     ui/scroll_view.h
     ui/scroller.h
     ui/search_field.h
+    ui/sidebar.h
     ui/segmented_control.h
     ui/slider.h
     ui/status_item.h
@@ -202,6 +203,7 @@ add_library(lingmo-sdk SHARED
     ui/scroll_view.cpp
     ui/scroller.cpp
     ui/search_field.cpp
+    ui/sidebar.cpp
     ui/segmented_control.cpp
     ui/slider.cpp
     ui/status_item.cpp
