@@ -78,6 +78,11 @@ void SidebarItem::pointerPress(const PointerEvent &event) {
 }
 
 void SidebarItem::pointerRelease(const PointerEvent &event) {
+  if (event.button == MouseButton::Right && localRect().contains(event.position)) {
+    if (onContextMenu)
+      onContextMenu(event.position);
+    return;
+  }
   if (!m_pressed)
     return;
   m_pressed = false;

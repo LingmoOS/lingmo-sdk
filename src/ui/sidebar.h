@@ -28,6 +28,7 @@ public:
   bool acceptsFocus() const override { return true; }
 
   std::function<void()> onActivated;
+  std::function<void(PointF)> onContextMenu;
   std::function<void(int)> onMoveRequested;
 
 protected:
