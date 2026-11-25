@@ -1,3 +1,13 @@
+lingmo-sdk (5.1.0+lingmo5u1) unstable; urgency=medium
+
+  * Add Liquid Glass control style: Theme::controlStyle field, addLiquidGlassColors()
+    colour variant in toolkit_colors.cpp, Liquid Glass paint paths in Button,
+    Switch, and Slider (translucent surface, edge highlight, specular bead).
+  * Add drawBitmapQuad() four-corner projective draw to BitmapPainter.
+  * appearance.cpp: read and apply controlStyle from the D-Bus GetAll reply.
+
+ -- Lingmo OS Team <team@lingmo.org>  Wed, 26 Nov 2026 10:00:00 +0800
+
 lingmo-sdk (5.0.10+lingmo5u1) unstable; urgency=medium
 
   * Add an edit-menu example with theme icons and optional shortcuts to the toolkit gallery.
