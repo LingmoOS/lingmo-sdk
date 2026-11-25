@@ -231,7 +231,7 @@ void BitmapPainter::drawBitmapQuad(const base::RectF& src, const Bitmap& bitmap,
         {SkScalar(dst.br.x()), SkScalar(dst.br.y())},
     };
     SkMatrix persp;
-    if (!persp.setPolyToPoly(srcPts, dstPts, 4))
+    if (!persp.setPolyToPoly(SkSpan<const SkPoint>(srcPts, 4), SkSpan<const SkPoint>(dstPts, 4)))
         return; // degenerate quad
 
     SkPaint paint;
