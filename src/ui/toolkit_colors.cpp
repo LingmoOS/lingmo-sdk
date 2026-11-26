@@ -150,23 +150,23 @@ static void addLiquidGlassColors(ColorMixer& mixer, const Theme& theme)
                                                                : Color::fromArgb(0xDDF2F4F6);
 
     // --- Buttons ---
-    // The glass surface: very slightly white/grey, mostly transparent.
-    // On dark backdrops the glass appears lighter; on light ones it appears
-    // as a slightly frosted clear surface.
-    mixer[ColorId::ButtonBackground] = dark ? kWhite.withAlpha(0.12) : kWhite.withAlpha(0.60);
-    // Hover adds a brighter specular flash on the top of the glass.
-    mixer[ColorId::ButtonBackgroundHovered] = dark ? kWhite.withAlpha(0.20) : kWhite.withAlpha(0.72);
-    // Press compresses the glass: slightly darker and more saturated.
-    mixer[ColorId::ButtonBackgroundPressed] = dark ? kWhite.withAlpha(0.08) : kWhite.withAlpha(0.48);
+    // The glass surface: in dark mode it appears as a bright frosted pill; in
+    // light mode a subtle dark tint that is clearly visible on any light background
+    // while still having the shadow+rim treatment of a glass bead.
+    mixer[ColorId::ButtonBackground] = dark ? kWhite.withAlpha(0.12) : kBlack.withAlpha(0.07);
+    // Hover brightens the pill slightly.
+    mixer[ColorId::ButtonBackgroundHovered] = dark ? kWhite.withAlpha(0.20) : kBlack.withAlpha(0.11);
+    // Press deepens the tint.
+    mixer[ColorId::ButtonBackgroundPressed] = dark ? kWhite.withAlpha(0.08) : kBlack.withAlpha(0.14);
     mixer[ColorId::ButtonFocusRing] = withAlpha(ColorId::Highlight, 0.6);
 
     // --- ComboBox (Dropdown) ---
-    mixer[ColorId::ComboBoxBackground] = dark ? kWhite.withAlpha(0.12) : kWhite.withAlpha(0.60);
-    mixer[ColorId::ComboBoxBackgroundPressed] = dark ? kWhite.withAlpha(0.08) : kWhite.withAlpha(0.48);
+    mixer[ColorId::ComboBoxBackground] = dark ? kWhite.withAlpha(0.12) : kBlack.withAlpha(0.07);
+    mixer[ColorId::ComboBoxBackgroundPressed] = dark ? kWhite.withAlpha(0.08) : kBlack.withAlpha(0.14);
     mixer[ColorId::ComboBoxFocusBorder] = ColorId::Highlight;
 
     // --- Checkbox / Radio ---
-    mixer[ColorId::ToggleBackground] = dark ? kWhite.withAlpha(0.14) : kWhite.withAlpha(0.55);
+    mixer[ColorId::ToggleBackground] = dark ? kWhite.withAlpha(0.14) : kBlack.withAlpha(0.07);
     mixer[ColorId::ToggleBackgroundChecked] = ColorId::Highlight;
     mixer[ColorId::ToggleBorder] = dark ? kWhite.withAlpha(0.30) : kBlack.withAlpha(0.14);
     mixer[ColorId::ToggleBorderChecked] = darker(ColorId::Highlight, 1.1);
@@ -196,8 +196,8 @@ static void addLiquidGlassColors(ColorMixer& mixer, const Theme& theme)
     mixer[ColorId::SliderHandleShadowPressed] = kBlack.withAlpha(0.20);
 
     // --- Segmented Control ---
-    // Track: a subtle glass tray.
-    mixer[ColorId::SegmentedControlTrack] = dark ? kWhite.withAlpha(0.09) : kBlack.withAlpha(0.05);
+    // Track: a subtle glass tray, slightly more visible in light mode.
+    mixer[ColorId::SegmentedControlTrack] = dark ? kWhite.withAlpha(0.09) : kBlack.withAlpha(0.07);
     // Selected plate: a bright glass pill inside the tray.
     mixer[ColorId::SegmentedControlPlate] = dark ? kWhite.withAlpha(0.18) : kWhite.withAlpha(0.80);
     mixer[ColorId::SegmentedControlPlateShadow] = kBlack.withAlpha(dark ? 0.22 : 0.10);
@@ -220,11 +220,11 @@ static void addLiquidGlassColors(ColorMixer& mixer, const Theme& theme)
     mixer[ColorId::HeaderButtonTint] = dark ? kWhite : Color::rgb(0x2A2A2F);
 
     // --- Dialog buttons ---
-    mixer[ColorId::DialogButtonBackground] = dark ? kWhite.withAlpha(0.11) : kWhite.withAlpha(0.60);
-    mixer[ColorId::DialogButtonBackgroundHovered] = dark ? kWhite.withAlpha(0.19) : kWhite.withAlpha(0.70);
+    mixer[ColorId::DialogButtonBackground] = dark ? kWhite.withAlpha(0.11) : kBlack.withAlpha(0.07);
+    mixer[ColorId::DialogButtonBackgroundHovered] = dark ? kWhite.withAlpha(0.19) : kBlack.withAlpha(0.11);
     // The edge highlight is the glass rim; replaces the flat border.
-    mixer[ColorId::DialogButtonBorder] = dark ? kWhite.withAlpha(0.22) : kWhite.withAlpha(0.72);
-    mixer[ColorId::DialogButtonInnerEdge] = kWhite.withAlpha(dark ? 0.14 : 0.30);
+    mixer[ColorId::DialogButtonBorder] = dark ? kWhite.withAlpha(0.22) : kBlack.withAlpha(0.12);
+    mixer[ColorId::DialogButtonInnerEdge] = kWhite.withAlpha(dark ? 0.14 : 0.20);
     mixer[ColorId::DialogButtonProminentText] = kWhite;
     mixer[ColorId::DialogButtonProminentInnerEdge] = kWhite.withAlpha(0.28);
     mixer[ColorId::DialogButtonFocusRing] = withAlpha(ColorId::Highlight, 0.40);
