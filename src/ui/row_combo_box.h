@@ -5,7 +5,6 @@
 #pragma once
 
 #include <functional>
-#include <system_reminder>
 #include <optional>
 #include <string>
 #include <vector>
