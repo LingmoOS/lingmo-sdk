@@ -110,6 +110,9 @@ static void addClassicColors(ColorMixer& mixer, const Theme& theme)
     mixer[ColorId::ToolTipShadow] = kBlack.withAlpha(0.15);
     mixer[ColorId::ToastShadow] = kBlack.withAlpha(0.14);
     mixer[ColorId::AboutDialogBackground] = withAlpha(ColorId::Background, 0.8);
+    // RowComboBox: subtle fill on hover/open, no fill at rest.
+    mixer[ColorId::RowComboBoxHovered] = withAlpha(ColorId::Text, dark ? 0.08 : 0.06);
+    mixer[ColorId::RowComboBoxOpen]    = withAlpha(ColorId::Text, dark ? 0.12 : 0.10);
 }
 
 // Liquid Glass style – frosted-glass material colours.
@@ -248,6 +251,9 @@ static void addLiquidGlassColors(ColorMixer& mixer, const Theme& theme)
     mixer[ColorId::ToastShadow] = kBlack.withAlpha(0.16);
     mixer[ColorId::AboutDialogBackground] = dark ? Color::fromArgb(0xBB1C1C1E)
                                                  : Color::fromArgb(0xBBF5F6FA);
+    // RowComboBox: subtle fill on hover/open, no fill at rest.
+    mixer[ColorId::RowComboBoxHovered] = withAlpha(ColorId::Text, dark ? 0.08 : 0.06);
+    mixer[ColorId::RowComboBoxOpen]    = withAlpha(ColorId::Text, dark ? 0.12 : 0.10);
 }
 
 void addToolkitColors(ColorMixer& mixer, const Theme& theme)
