@@ -9,11 +9,10 @@
 #include <optional>
 #include <string>
 
+#include "ui/animation.h"
 #include "ui/view.h"
 
 namespace Lingmo::ui {
-
-class Animation;
 
 // A title bar button: window button artwork on a round plate that
 // shows on hover, dimmed while the window is inactive.
