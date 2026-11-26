@@ -151,12 +151,13 @@ void HeaderButton::animateHover(double target)
         m_hoverAnimation = std::make_unique<Animation>(window());
         m_hoverAnimation->setDuration(std::chrono::milliseconds(110));
         m_hoverAnimation->setEasing(Animation::Easing::OutCubic);
-        m_hoverAnimation->onUpdate = [this](double v) {
-            m_hoverAmount = v;
-            requestPaint();
-        };
     }
-    m_hoverAnimation->setRange(m_hoverAmount, target);
+    const double from = m_hoverAmount;
+    m_hoverAnimation->stop();
+    m_hoverAnimation->onUpdate = [this, from, target](double v) {
+        m_hoverAmount = from + (target - from) * v;
+        requestPaint();
+    };
     m_hoverAnimation->start();
 }
 
