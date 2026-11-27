@@ -72,7 +72,7 @@ static void addClassicColors(ColorMixer& mixer, const Theme& theme)
     mixer[ColorId::SliderHandleShadow] = kBlack.withAlpha(0.1);
     mixer[ColorId::SliderHandleShadowPressed] = kBlack.withAlpha(0.15);
 
-    mixer[ColorId::SegmentedControlTrack] = dark ? kWhite.withAlpha(0.06) : kBlack.withAlpha(0.09);
+    mixer[ColorId::SegmentedControlTrack] = dark ? kWhite.withAlpha(0.06) : kBlack.withAlpha(0.05);
     mixer[ColorId::SegmentedControlPlate] = dark ? lighter(ColorId::SecondBackground, 2)
                                                  : kWhite;
     mixer[ColorId::SegmentedControlPlateShadow] = kBlack.withAlpha(dark ? 0.18 : 0.12);
