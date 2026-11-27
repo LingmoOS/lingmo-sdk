@@ -158,7 +158,7 @@ void HeaderButton::animateHover(double target)
         m_hoverAmount = from + (target - from) * v;
         requestPaint();
     };
-    m_hoverAnimation->start(window(), 0, 1, 110, Easing::OutCubic);
+    m_hoverAnimation->start();
 }
 
 void HeaderButton::pointerEnter()
