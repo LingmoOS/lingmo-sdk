@@ -35,10 +35,10 @@ static void addClassicColors(ColorMixer& mixer, const Theme& theme)
     // Classic mode: use pure white for buttons so they stand out on the
     // window background (#F2F4F5 → #FFFFFF contrast).  A 1px border gives
     // the edge definition that the fill alone cannot supply.
-    mixer[ColorId::ButtonBackground] = dark ? ColorId::AlternateBackground
-                                            : kWhite;
-    mixer[ColorId::ButtonBorder]     = dark ? kTransparent
-                                            : kBlack.withAlpha(0.14);
+    mixer[ColorId::ButtonBackground] = dark ? ColorRecipe(ColorId::AlternateBackground)
+                                            : ColorRecipe(kWhite);
+    mixer[ColorId::ButtonBorder]     = dark ? ColorRecipe(kTransparent)
+                                            : ColorRecipe(kBlack.withAlpha(0.14));
     mixer[ColorId::ButtonBackgroundHovered] = dark ? lighter(ColorId::ButtonBackground, 1.2)
                                                    : Color::rgb(0xF5F5F7);
     mixer[ColorId::ButtonBackgroundPressed] = dark ? lighter(ColorId::ButtonBackground, 1.1)
