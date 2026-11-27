@@ -1,3 +1,11 @@
+lingmo-sdk (5.1.6+lingmo5u1) unstable; urgency=medium
+
+  * Define the Liquid Glass button surface colour to prevent the missing-colour
+    fallback from painting buttons magenta.
+  * Add a rendered-colour regression test for Liquid Glass buttons.
+
+ -- Lingmo OS Team <team@lingmo.org>  Sat, 28 Nov 2026 02:00:00 +0800
+
 lingmo-sdk (5.1.5+lingmo5u1) unstable; urgency=medium
 
   * Fix HeaderButton hover animation to use Animation's current start API.

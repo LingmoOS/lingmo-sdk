@@ -160,6 +160,7 @@ static void addLiquidGlassColors(ColorMixer& mixer, const Theme& theme)
     // Light mode: very subtle dark tint (3%) — clearly visible via shadow+rim,
     // not grey enough to look "coloured" on a white background.
     // Liquid Glass: ButtonBorder not used (shadow+rim provide the edge).
+    mixer[ColorId::ButtonBackground] = dark ? kWhite.withAlpha(0.10) : kBlack.withAlpha(0.03);
     mixer[ColorId::ButtonBorder] = kTransparent;
     mixer[ColorId::ButtonBackgroundHovered] = dark ? kWhite.withAlpha(0.20) : kBlack.withAlpha(0.06);
     mixer[ColorId::ButtonBackgroundPressed] = dark ? kWhite.withAlpha(0.08) : kBlack.withAlpha(0.09);
