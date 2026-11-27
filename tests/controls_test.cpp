@@ -20,6 +20,7 @@
 #include "ui/menu.h"
 #include "ui/segmented_control.h"
 #include "ui/slider.h"
+#include "ui/sidebar.h"
 #include "ui/switch.h"
 #include "ui/test_input.h"
 #include "ui/text_field.h"
@@ -80,6 +81,21 @@ TEST(ControlsTest, TogglesKeepTheirPadding)
     // As horizontalPadding: 0.
     radio->setPadding({0, 4, 0, 4});
     EXPECT_EQ(radio->sizeHint().width, width - 8);
+}
+
+TEST(ControlsTest, SidebarItemCanShowItsIconWithoutATile)
+{
+    const Color background = Color::rgb(0xF5F6FA);
+    Window window;
+    window.setBackgroundColor(background);
+    auto sidebarItem = std::make_unique<SidebarItem>("computer", "Computer", "computer-symbolic");
+    SidebarItem* item = host(window, std::move(sidebarItem), {240, 56});
+    item->setIconBackgroundVisible(false);
+
+    const Image image = window.grab();
+    const int x = int(item->geometry().x + 20);
+    const int y = int(item->geometry().y + 9);
+    EXPECT_EQ(image.pixel(x, y).argb(), background.argb());
 }
 
 TEST(ControlsTest, RadioButtonsTurnEachOtherOff)

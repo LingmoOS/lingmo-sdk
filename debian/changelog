@@ -1,3 +1,10 @@
+lingmo-sdk (5.1.4+lingmo5u1) unstable; urgency=medium
+
+  * Fix HeaderButton hover animation setup and Classic-mode button colors.
+  * Add coverage for SidebarItem icons without a background tile.
+
+ -- Lingmo OS Team <team@lingmo.org>  Sat, 28 Nov 2026 00:14:00 +0800
+
 lingmo-sdk (5.1.3+lingmo5u1) unstable; urgency=medium
 
   * Complete Liquid Glass coverage across all interactive SDK controls:
